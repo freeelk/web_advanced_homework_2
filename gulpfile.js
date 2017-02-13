@@ -13,6 +13,7 @@ global.$ = {
   del: require('del'),
   browserSync: require('browser-sync').create(),
   spritesmith: require("gulp.spritesmith"),
+  ftp: require( 'vinyl-ftp' ),
   gp: require('gulp-load-plugins')()
 };
 
