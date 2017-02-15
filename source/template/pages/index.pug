@@ -1,9 +1,21 @@
-extends ../_template
+extends ../_welcome
 
 block variables
-  - var title = 'Home page'
+  - var title = 'Владимир Шелест Личный сайт веб разработчика'
 
-block content
-  include ../common/_greating
-  include ../sprite_demo/_svg_sprite
-  include ../sprite_demo/_png_sprite
+block header
+  header.header
+      button.header__authorizate Авторизация
+
+block greeting
+  .greeting
+    .author-photo_rounded
+      img.author-photo__img(src="images/author.png", alt=`Фото автора: ${$.site.author}` )
+    .greeting__author #{$.site.author}
+    .greeting__name #{$.site.name}
+    +socials('socials-welcome')
+    +menu("greet-menu", $.greetMenu)
+
+
+block footer
+  +footerLine()

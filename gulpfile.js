@@ -14,7 +14,8 @@ global.$ = {
   browserSync: require('browser-sync').create(),
   spritesmith: require("gulp.spritesmith"),
   ftp: require( 'vinyl-ftp' ),
-  gp: require('gulp-load-plugins')()
+  gp: require('gulp-load-plugins')(),
+  fs: require('fs')
 };
 
 $.path.task.forEach(function(taskPath) {

@@ -1,0 +1,59 @@
+{
+
+  "site" : {
+    "author" : "Владимир Шелест",
+    "name" : "Личный сайт веб разработчика",
+    "date" : "2017",
+    "motto": "Создано с любовью в Loftshcool",
+    "footerMessage": "Я веб-разработчик из Сумской области Украины, и этот сайт сделал в рамках обучения в Школе онлайн облазования LoftSchool"
+  },
+
+  "socials" : [
+    {
+      "name": "vk",
+      "link" : "vk.com"
+    },
+    {
+      "name": "github",
+      "link": "github.com"
+    },
+    {
+      "name": "linkedin",
+      "link": "linkedin.com"
+    }
+  ],
+
+  "greetMenu" : [
+    {
+      "label": "Мои работы",
+      "link": "works.html"
+    },
+    {
+      "label": "Обо мне",
+      "link": "about.html"
+    },
+    {
+      "label": "Блог",
+      "link": "blog.html"
+    }
+  ],
+
+  "footerMenu" : [
+    {
+      "label": "Мои работы",
+      "link": "works.html"
+    },
+    {
+      "label": "Обо мне",
+      "link": "about.html"
+    },
+    {
+      "label": "Блог",
+      "link": "blog.html"
+    },
+    {
+      "label": "Авторизация",
+      "link": "index.html"
+    }
+  ]
+}
