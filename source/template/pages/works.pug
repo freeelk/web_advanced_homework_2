@@ -1,9 +1,48 @@
-extends ../_pages
+extends ../layout
 
-block intro
-    include ../sections/intro
+block content
+    .wrapper
+        include ../sections/hero
+        section.section.works
+            .section-title(style="background-image: url('assets/img/decor/works_header.svg')")
+                | Мои работы
+            .wrapper.works__wrapper
+                .works__col.works__col_left
+                    .work-descr-block
+                        .block-title Сайт школы онлайн-образования
+                        .work-descr-block__technologies HTML, CSS, JAVASCRIPT
+                        button.work-descr-block__show-site Посмотреть сайт
+                .works__col.works__col_right
+                    .work-slider-block
+                        img.work-slider-block__current(src="/assets/img/content/work-1.png")
+                        .work-slider-block__switch
+                            img.work-slider-block__image.work-slider-block__image_left(src="/assets/img/content/work-2.png")
+                            img.work-slider-block__image.work-slider-block__image_right(src="/assets/img/content/work-3.png")
+        section.section.feedbacks
+            .section-title(style="background-image: url('assets/img/decor/about_header.svg')")
+                | Что обо мне говорят
+            .feedbacks__wrapper
+                .feedbacks__items
+                    each feedback in $.feedbacks
+                        .feedbacks__feedback
+                            .feedbacks__feedback-content=feedback.content
+                            .feedbacks__feedback-bottom
+                                .feedbacks__feedback-image-container
+                                    img.feedbacks__feedback-image(src=`/assets/img/content/${feedback.photo}`)
+                                .feedbacks__feedback-author-container
+                                    .feedbacks__feedback-author=feedback.author
+                                    .feedbacks__feedback-author-state=feedback.about
 
-block page-content
-    .page-content Весь основной контент страницы "МОИ РАБОТЫ"
-    include ../sections/works_myworks
-    include ../sections/works_feedback
+                .wrapper.feedbacks__connect-me-wrapper
+                    .connect-me-block
+                        .block-title Связаться со мной
+                        input.connect-me-block__input(type="text" placeholder="Имя")
+                        input.connect-me-block__input(type="text" placeholder="Email")
+                        input.connect-me-block__input.connect-me-block__input-message(type="text" placeholder="Ваше сообщение")
+                        ul.box-menu
+                            li.box-menu__item
+                                a.box-menu__link(href="#") Отправить
+                            li.box-menu__item
+                                a.box-menu__link(href="#") Очистить
+
+        include ../sections/footer

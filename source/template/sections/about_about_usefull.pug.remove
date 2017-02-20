@@ -1,0 +1,9 @@
+.usefull
+    h1.title2 Чем я могу быть вам полезен
+    p.usefull__text #{$.usefull.text}
+    each area in $.usefull.areas
+        li(class = usefull__area)
+            h3.usefull__name-area #{area.name}
+            each skill in area.skills
+                +skill(skill.name, skill.progress)
+

@@ -1,0 +1,50 @@
+.greeting {
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.greeting__container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.greeting__bg-img {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.greeting__athorizate {
+  position: absolute;
+  top: 23px;
+  right: 26px;
+  background-color: transparent;
+  border: solid 1px #FFFFFF;
+  border-radius: 5px;
+  color: #FFFFFF;;
+  padding: 15px 32px;
+  text-align: center;
+  outline: none;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.greeting__athorizate:hover,
+.greeting__athorizate:active {
+  background-color: #fff;
+  color: #000;
+}
+
+.greeting-footer {
+  position: absolute;
+  bottom: 20px;
+  text-align: center;
+  color: #FFFFFF;
+  width: 100%;
+}

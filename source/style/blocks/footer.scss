@@ -1,0 +1,92 @@
+$sidePadding: 30px;
+$socialsSize: 40px;
+$socialsCount: 3;
+
+.footer {
+  height: $footerHeight;
+  background-color: rgba(#565b5f,0.8);
+  width: 100%;
+}
+
+.footer__top-block {
+  height: $footerHeight / 2;
+  width: 100%;
+  position: relative;
+  border-bottom: solid 1px #a5aaae;
+  padding-left: $sidePadding;
+  padding-right: $sidePadding;
+  @extend %clearfix;
+}
+
+.footer__menu {
+  float: left;
+}
+
+.footer__menu-item {
+  display: inline-block;
+  height: $footerHeight / 2;
+  padding-right: 40px;
+  position: relative;
+}
+
+.footer__menu-link {
+  color: #ffffff;
+  font-weight: bold;
+  line-height: $footerHeight / 2;
+  white-space: nowrap;
+}
+
+.footer__socials-wrapper {
+  float: right;
+  width: $socialsSize * $socialsCount;
+}
+
+.footer__socials {
+  position: absolute;
+  top: 50%;
+  height: $socialsSize;
+  margin-top: -20px;
+}
+
+.footer__socials-item {
+  display: inline-block;
+}
+
+.footer__socials-link {
+  display: block;
+  width: $socialsSize;
+  height: $socialsSize;
+  padding-left: 8px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  svg {
+    fill: #9ca8a8;
+    width: 40px;
+    height: 40px;
+  }
+  svg:hover {
+    fill: #ffffff;
+  }
+}
+
+.footer__bottom-block {
+  height: $footerHeight / 2;
+  width: 100%;
+  padding-left: $sidePadding;
+  padding-right: $sidePadding;
+  display: table;
+  color: #b7bdc1;
+}
+
+.footer__left-text {
+  width: 50%;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.footer__right-text {
+  display: table-cell;
+  vertical-align: middle;
+  width: 50%;
+  text-align: right;
+}

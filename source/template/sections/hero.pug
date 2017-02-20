@@ -1,0 +1,19 @@
+section.section.hero
+    .hero__bg
+        img(src="assets/img/bg/mountains_bg.jpg" alt="").hero__bg-img
+    .hero__container
+        img(src="assets/img/decor/portfolio_header.png" alt="").hero-title-pic
+        .user
+            .user__pic-container
+                img(src="assets/img/content/author.png" alt="").user__pic
+            .user__name #{$.site.author}
+            .user__desc #{$.site.name}
+    ul.hero-socials
+        each item in $.socials
+            li.hero__socials-item
+                a.hero__socials-link('href'=`${item.link}`)
+                    svg(class=`svg-${item.name}-dims`)
+                        use(xlink:href=`assets/img/sprite/sprite.svg#${item.name}`)
+    a.hero__hamburger(href="#")
+        svg(class=`svg-hamburger-dims`)
+            use(xlink:href=`assets/img/sprite/sprite.svg#hamburger`)

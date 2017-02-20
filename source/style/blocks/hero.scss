@@ -1,0 +1,52 @@
+.hero {
+  height: 600px;
+  overflow: hidden;
+  position: relative;
+}
+
+.hero__bg {
+  @include centered(X);
+  width: 100%;
+}
+
+.hero__container {
+  @include centered(Y);
+  width: 100%;
+}
+
+.hero-title-pic {
+  @include centered();
+}
+
+.hero-socials {
+  position: absolute;
+  left: 30px;
+  top: 30px;
+}
+
+.hero__socials-item {
+  display: inline-block;
+}
+
+.hero__socials-link {
+  display: block;
+  padding-left: 25px;
+  svg {
+    fill: rgba(#ffffff, 0.7);
+  }
+  svg:hover {
+    fill: #ffffff;
+  }
+}
+
+.hero__hamburger {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  svg {
+    fill: rgba(#ffffff, 0.7);
+  }
+  svg:hover {
+    fill: #ffffff;
+  }
+}

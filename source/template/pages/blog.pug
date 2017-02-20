@@ -1,9 +1,42 @@
-extends ../_pages
+extends ../layout
 
-block intro
-    include ../sections/intro
+block content
+    .wrapper
+        section.section.hero.hero_blog
+            .hero__bg
+                img(src="assets/img/bg/mountains_bg.jpg" alt="").hero__bg-img
+            .hero__container
+                .user
+                    .user__pic-container
+                        img(src="assets/img/content/author.png" alt="").user__pic
+                    .hero__section-title-container
+                        .section-title.section-title_blog(style="background-image: url('assets/img/decor/blog_header.svg')") Блог
+                        .hero__name Статьи, которые я написал
+            ul.hero-socials
+                each item in $.socials
+                    li.hero__socials-item
+                        a.hero__socials-link('href'=`${item.link}` target="_blank")
+                            svg(class=`svg-${item.name}-dims`)
+                                use(xlink:href=`assets/img/sprite/sprite.svg#${item.name}`)
+            a.hero__hamburger(href="#")
+                svg(class=`svg-hamburger-dims`)
+                    use(xlink:href=`assets/img/sprite/sprite.svg#hamburger`)
+            img.blog__hero-bg(src="assets/img/bg/blog_hero_bg.svg")
+        section.section.blog
+            .wrapper.blog__wrapper
+                .blog__col.blog__col_left
+                    ul.blog__menu
+                        each item in $.blog
+                            if item.selected
+                                li.blog__menu-item.blog__menu-item_selected #{item.title}
+                            else
+                                li.blog__menu-item #{item.title}
+                .blog__col.blog__col_right
+                    ul.blog__menu
+                        each item in $.blog
+                            li.blog__menu-item
+                                h1.blog__menu-item-header #{item.title}
+                                .blog__menu-item-date #{item.date}
+                                .blog__menu-item-content!= item.content
 
-block page-content
-    .page-content Весь основной контент страницы "БЛОГ"
-        include ../sections/blog_content
-
+        include ../sections/footer

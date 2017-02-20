@@ -1,0 +1,34 @@
+.work-descr-block {
+  @include centered();
+  width: 70%;
+}
+
+.work-descr-block__technologies {
+  color: #00bf9d;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-top: solid 1px #00bf9d;
+  border-bottom: solid 1px #00bf9d;
+
+}
+
+.work-descr-block__show-site  {
+  border: none;
+  border-radius: 5px;
+  color: #FFFFFF;
+  margin-top: 42px;
+  margin-bottom: 42px;
+  padding: 12px;
+  padding-left: 40px;
+  padding-right: 22px;
+  text-align: center;
+  outline: none;
+  text-decoration: none;
+  font-size: 16px;
+  background-color: #00bf9d;
+  background-image: url("/assets/img/icons/link.svg");
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-position-x: 10px;
+}

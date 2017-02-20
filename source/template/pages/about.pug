@@ -1,11 +1,46 @@
-extends ../_pages
+extends ../layout
 
-block intro
-    include ../sections/intro
+block content
+    .wrapper
+        include ../sections/hero
+        section.section.about
+            .about__col.about__col_left
+                svg(viewBox="0 0 1000 110" preserveAspectRatio="none").about__triangle
+                    polygon(points="0,0 0,110 1000,110")
+                .section-title(style="background-image: url('assets/img/decor/about_header.svg')")
+                    | Обо мне
+                .about__inner
+                    img.about__pic(src="/assets/img/content/author_big.png")
+                    .block-title Кто я
+                    .block-text!= $.aboutText
+            .about__col.about__col_right
+                svg(viewBox="0 0 1000 110" preserveAspectRatio="none").about__triangle
+                    polygon(points="0,110 1000,110 1000,0")
+                .skills
+                    .block-title Чем я могу быть вам полезен
+                    .skills_text.block-text!= $.usefull.text
+                    ul.skills-group
+                        each skillGroup in $.usefull.areas
+                            li.skills-group__item
+                                .skill-group__title #{skillGroup.name}
+                                ul.skills-list
+                                each skill in skillGroup.skills
+                                    li.skills-list__item
+                                    .skill
+                                        svg.skill__circle
+                                            circle(r="45" cx="50%" cy="50%" ).skill__circle_under
+                                            circle(r="45" cx="50%" cy="50%" ).skill__circle_above
+                                        .skill__name #{skill.name}
 
-block page-content
-    .page-content Весь основной контент страницы "ОБО МНЕ"
-        include ../sections/about_about
-        include ../sections/about_contacts
-
-
+        section.section.map
+            .map__bg
+                img(src="assets/img/bg/map_bg.png" alt="").map__bg-img
+            .map__container
+                .contacts
+                    .block-title.block-title_center Контакты
+                    ul.contacts__list
+                        - var contactsItems = [{name:'skype', value:"vvshelest"}, {name:'email', 'value':"freeelk@gmail.com"}, {'name':'phone', 'value':'+3080955888***'}, {'name':'address', 'value':'Украина, Сумская область, г. Тростянец'}]
+                        each item in contactsItems
+                            li.contacts__item(style=`background-image: url('/assets/img/sprite/${item.name}.svg');`) #{item.value}
+            .map__footer
+                include ../sections/footer

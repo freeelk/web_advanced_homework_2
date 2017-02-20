@@ -1,0 +1,42 @@
+.contacts {
+  width: 380px;
+  height: 290px;
+  text-align: center;
+  border-radius: 10px;
+  @include centered();
+  background: rgba(#fcfcfc, 0.8);
+}
+
+.contacts__list {
+  text-align: left;
+  margin-left: 44px;
+
+}
+
+.contacts__item {
+  color: #9ca7ad;
+  font-weight: bold;
+  vertical-align: middle;
+  height: 24px;
+  padding-left: 35px;
+  margin-bottom: 18px;
+  background-repeat: no-repeat;
+  background-position: left center;
+
+}
+
+.contacts__item-skype {
+
+}
+
+.contacts__item-email {
+
+}
+
+.contacts__item-email {
+
+}
+
+.contacts__item-address {
+
+}

@@ -1,0 +1,31 @@
+$footerHeight: 148px;
+
+@mixin centered($axis: 'both') {
+  position: absolute;
+
+  @if ($axis == 'both') {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  @if ($axis == 'X') {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  @if ($axis == 'Y') {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+%clearfix {
+  &:after, &:before {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}

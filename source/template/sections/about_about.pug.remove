@@ -1,0 +1,5 @@
+section.about Раздел Обо мне на странице ОБО МНЕ
+    h1.title Обо мне
+    include ./about_about_whoiam
+    include ./about_about_usefull
+

@@ -1,0 +1,56 @@
+.about {
+  @extend %clearfix;
+  display: flex;
+}
+
+.about__col {
+  float: left;
+  width: 50%;
+  position: relative;
+  flex: 1;
+  text-align: center;
+
+  &_left {
+    background: $white;
+    .about__triangle {
+      left: 0;
+      fill: $white;
+    }
+  }
+
+  &_right {
+    background: $beige;
+    .about__triangle {
+      right: 0;
+      fill: $beige;
+    }
+
+  }
+}
+
+.about__triangle {
+  display: block;
+  width: 100%;
+  height: 110px;
+  position: absolute;
+  bottom: 100%;
+}
+
+.about__inner {
+  margin-left: 70px;
+  margin-right: 70px;
+  padding-bottom: 43px;
+}
+
+.about__pic {
+  width: 446px;
+  display: block;
+  margin: 0 auto;
+}
+
+.skills {
+  padding-left: 35px;
+  padding-right: 35px;
+  padding-bottom: 66px;
+}
+

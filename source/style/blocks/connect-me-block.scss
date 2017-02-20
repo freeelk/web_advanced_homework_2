@@ -1,0 +1,23 @@
+.connect-me-block {
+  width: 380px;
+  height: 436px;
+  display: block;
+  text-align: center;
+  border-radius: 10px;
+  overflow: hidden;
+  @include centered();
+  background: rgba(#fcfcfc, 0.5);
+}
+
+.connect-me-block__input {
+  width: 340px;
+  height: 44px;
+  border-radius: 5px;
+  border: none;
+  margin-bottom: 18px;
+  padding: 15px;
+}
+
+.connect-me-block__input-message {
+  height: 139px;
+}

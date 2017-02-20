@@ -1,0 +1,17 @@
+footer.footer
+    .footer__top-block
+        ul.footer__menu
+            each item in $.footerMenu
+                li.footer__menu-item
+                    a.footer__menu-link(href=item.link)=item.label
+        .footer__socials-wrapper
+            ul.footer__socials
+                each item in $.socials
+                    li.footer__socials-item
+                        a.footer__socials-link(href=item.link target="_blank")
+                            svg
+                                use(xlink:href=`assets/img/sprite/sprite.svg#${item.name}_round`)
+    .footer__bottom-block
+        .footer__left-text #{$.site.footerMessage}
+        .footer__right-text &copy; #{$.site.author} | #{$.site.motto} | #{$.site.date}
+

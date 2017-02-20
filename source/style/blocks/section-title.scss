@@ -1,0 +1,32 @@
+.section-title {
+  font-size: 63px;
+  color: #373e42;
+  text-align: center;
+  padding: 45px 80px;
+  display: inline-block;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
+  font-family: "bernier_regular";
+
+
+    &:before, &:after {
+      content: "";
+      display: block;
+      width: 22px;
+      height: 5px;
+      @include centered(Y);
+      background: #c9c9c9;
+    }
+
+    $dashMargin: 40px;
+
+    &:before {
+      left: $dashMargin;
+    }
+
+    &:after {
+      right: $dashMargin;
+    }
+}

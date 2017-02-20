@@ -1,21 +1,29 @@
-extends ../_welcome
+extends ../layout
 
-block variables
-  - var title = 'Владимир Шелест Личный сайт веб разработчика'
+block content
+    .wrapper
+        section.section.greeting
+            .greeting__bg
+                img(src="assets/img/bg/mountains_bg.jpg" alt="").greeting__bg-img
+                .greeting__container
+                    button.greeting__athorizate Авторизоваться
+                    .greeting-box
+                        .greeting-box__pic-container
+                            img(src="assets/img/content/author.png" alt="").greeting-box__pic
+                        .greeting-box__name #{$.site.author}
+                        .greeting-box__desc #{$.site.name}
+                        ul.greeting-box__socials
+                            each item in $.socials
+                                li.greeting-box__socials-item
+                                    a.greeting-box__socials-link('href'=`${item.link}` target="_blank")
+                                        svg(class=`svg-${item.name}-dims`)
+                                            use(xlink:href=`assets/img/sprite/sprite.svg#${item.name}`)
+                        ul.box-menu
+                            li.box-menu__item
+                                a.box-menu__link(href="/works.html") Мои работы
+                            li.box-menu__item
+                                a.box-menu__link(href="/about.html") Обо мне
+                            li.box-menu__item
+                                a.box-menu__link(href="/blog.html") Блог
 
-block header
-  header.header
-      button.header__authorizate Авторизация
-
-block greeting
-  .greeting
-    .author-photo_rounded
-      img.author-photo__img(src="images/author.png", alt=`Фото автора: ${$.site.author}` )
-    .greeting__author #{$.site.author}
-    .greeting__name #{$.site.name}
-    +socials('socials-welcome')
-    +menu("greet-menu", $.greetMenu)
-
-
-block footer
-  +footerLine()
+                    .greeting-footer &copy; #{$.site.author} | #{$.site.motto} | #{$.site.date}

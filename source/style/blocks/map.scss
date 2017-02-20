@@ -1,0 +1,23 @@
+$mapHeight: 824px;
+
+.map {
+  height: $mapHeight;
+  overflow: hidden;
+  position: relative;
+}
+
+.map__bg {
+  @include centered(X);
+  width: 100%;
+}
+
+.map__container {
+  height: $mapHeight - $footerHeight;
+  position: relative;
+}
+
+.map__footer {
+  position: absolute;
+  bottom:0px;
+  width: 100%;
+}

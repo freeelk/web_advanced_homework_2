@@ -6,7 +6,7 @@ let svgSpriteConfig = {
       sprite: "../sprite.svg",
       render: {
         scss: {
-          dest:'../../../../source/style/sprites_generated/sprite-svg.scss',
+          dest:'../../../../../source/style/sprites_generated/sprite-svg.scss',
         },
       },
     },
@@ -31,6 +31,6 @@ module.exports = function() {
       }))
       .pipe($.gp.replace('&gt;', '>'))
       .pipe($.gp.svgSprite(svgSpriteConfig))
-      .pipe($.gulp.dest($.config.root + '/assets/img'))
+      .pipe($.gulp.dest($.config.root + '/assets/img/sprite'))
   })
 };

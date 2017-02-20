@@ -1,0 +1,15 @@
+section.feedback Раздел "ЧТО ОБО МНЕ ГОВОРЯТ"
+    h1.title1 Что обо мне говорят
+    .container
+        each feedback in $.feedbacks
+            +feedback(feedback.content, feedback.author, feedback.about, feedback.photo)
+    .container
+        .connect-me
+            h2.title2 Связаться со мной
+            form.connect-me__form
+                input.connect-me__name(type="text")
+                input.connect-me__email(type="text")
+                input.connect-me__message(type="text")
+                .wrapper
+                    input.connect-me__button-send(type="button", name="send", value="Отправить")
+                    input.connect-me__button-send(type="button", name="send", value="Очистить")
