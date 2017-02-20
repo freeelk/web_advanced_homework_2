@@ -1,4 +1,0 @@
-.whoiam Блок "КТО Я"
-    img.about__photo(src="images/myphoto.png", alt="Мое фото")
-    h2.title2 Кто я
-    .text!= $.aboutText
