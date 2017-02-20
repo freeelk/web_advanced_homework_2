@@ -33,14 +33,14 @@ block content
                                         .skill__name #{skill.name}
 
         section.section.map
-            .map__bg
-                img(src="assets/img/bg/map_bg.png" alt="").map__bg-img
-            .map__container
-                .contacts
-                    .block-title.block-title_center Контакты
-                    ul.contacts__list
-                        - var contactsItems = [{name:'skype', value:"vvshelest"}, {name:'email', 'value':"freeelk@gmail.com"}, {'name':'phone', 'value':'+3080955888***'}, {'name':'address', 'value':'Украина, Сумская область, г. Тростянец'}]
-                        each item in contactsItems
-                            li.contacts__item(style=`background-image: url('/assets/img/sprite/${item.name}.svg');`) #{item.value}
-            .map__footer
-                include ../sections/footer
+            .map__google(id="map")
+            .map__box-over
+                .map__container
+                    .contacts
+                        .block-title.block-title_center Контакты
+                        ul.contacts__list
+                            - var contactsItems = [{name:'skype', value:"vvshelest"}, {name:'email', 'value':"freeelk@gmail.com"}, {'name':'phone', 'value':'+3080955888***'}, {'name':'address', 'value':'Украина, Сумская область, г. Тростянец'}]
+                            each item in contactsItems
+                                li.contacts__item(style=`background-image: url('/assets/img/sprite/${item.name}.svg');`) #{item.value}
+                .map__footer
+                    include ../sections/footer

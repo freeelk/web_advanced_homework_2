@@ -21,3 +21,16 @@ $mapHeight: 824px;
   bottom:0px;
   width: 100%;
 }
+
+.map__google{
+  height: $mapHeight; // - $footerHeight;
+  width: 100%;
+  position: relative;
+}
+
+.map__box-over {
+  position: absolute;
+  @include centered();
+  width: 100%;
+  height: 100%;
+}
