@@ -1,21 +1,20 @@
 extends ../layout
+block variables
+    - var title = $.site.author + " | " + $.site.name + " | " + $.site.pages.about
 
 block content
     .wrapper
+        -var pageName = "about"
         include ../sections/hero
         section.section.about
             .about__col.about__col_left
-                svg(viewBox="0 0 1000 110" preserveAspectRatio="none").about__triangle
-                    polygon(points="0,0 0,110 1000,110")
                 .section-title(style="background-image: url('assets/img/decor/about_header.svg')")
                     | Обо мне
                 .about__inner
-                    img.about__pic(src="/assets/img/content/author_big.png")
+                    img.about__pic(src="/assets/img/content/author_big.png" alt="Фото автора")
                     .block-title Кто я
                     .block-text!= $.aboutText
             .about__col.about__col_right
-                svg(viewBox="0 0 1000 110" preserveAspectRatio="none").about__triangle
-                    polygon(points="0,110 1000,110 1000,0")
                 .skills
                     .block-title Чем я могу быть вам полезен
                     .skills_text.block-text!= $.usefull.text

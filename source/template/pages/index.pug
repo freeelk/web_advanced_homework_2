@@ -1,15 +1,16 @@
 extends ../layout
-
+block variables
+    - var title = $.site.author + " | " +  $.site.name + " | " + $.site.pages.index
 block content
     .wrapper
         section.section.greeting
             .greeting__bg
-                img(src="assets/img/bg/mountains_bg.jpg" alt="").greeting__bg-img
+                img(src="assets/img/bg/mountains_bg.jpg" alt="mountains background").greeting__bg-img
                 .greeting__container
                     button.greeting__athorizate Авторизоваться
                     .greeting-box
                         .greeting-box__pic-container
-                            img(src="assets/img/content/author.png" alt="").greeting-box__pic
+                            img(src="assets/img/content/author.png" alt="Фото автора").greeting-box__pic
                         .greeting-box__name #{$.site.author}
                         .greeting-box__desc #{$.site.name}
                         ul.greeting-box__socials

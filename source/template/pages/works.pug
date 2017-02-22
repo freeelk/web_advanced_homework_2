@@ -1,8 +1,9 @@
 extends ../layout
-
+block variables
+    - var title = $.site.author + " | " +  $.site.name + " | " + $.site.pages.works
 block content
     .wrapper
-        -var showTriangles = true
+        -var pageName = "works"
         include ../sections/hero
         section.section.works
             .section-title(style="background-image: url('assets/img/decor/works_header.svg')")
@@ -15,10 +16,10 @@ block content
                         button.work-descr-block__show-site Посмотреть сайт
                 .works__col.works__col_right
                     .work-slider-block
-                        img.work-slider-block__current(src="/assets/img/content/work-1.png")
+                        img.work-slider-block__current(src="/assets/img/content/work-1.png" alt="Пример сайта 1")
                         .work-slider-block__switch
-                            img.work-slider-block__image.work-slider-block__image_left(src="/assets/img/content/work-2.png")
-                            img.work-slider-block__image.work-slider-block__image_right(src="/assets/img/content/work-3.png")
+                            img.work-slider-block__image.work-slider-block__image_left(src="/assets/img/content/work-2.png" alt="Пример сайта 2")
+                            img.work-slider-block__image.work-slider-block__image_right(src="/assets/img/content/work-3.png" alt="Пример сайта 3")
         section.section.feedbacks
             .section-title(style="background-image: url('assets/img/decor/about_header.svg')")
                 | Что обо мне говорят
@@ -29,7 +30,7 @@ block content
                             .feedbacks__feedback-content=feedback.content
                             .feedbacks__feedback-bottom
                                 .feedbacks__feedback-image-container
-                                    img.feedbacks__feedback-image(src=`/assets/img/content/${feedback.photo}`)
+                                    img.feedbacks__feedback-image(src=`/assets/img/content/${feedback.photo}` alt="Фото автора отзыва")
                                 .feedbacks__feedback-author-container
                                     .feedbacks__feedback-author=feedback.author
                                     .feedbacks__feedback-author-state=feedback.about
@@ -40,10 +41,8 @@ block content
                         input.connect-me-block__input(type="text" placeholder="Имя")
                         input.connect-me-block__input(type="text" placeholder="Email")
                         input.connect-me-block__input.connect-me-block__input-message(type="text" placeholder="Ваше сообщение")
-                        ul.box-menu
-                            li.box-menu__item
-                                a.box-menu__link(href="#") Отправить
-                            li.box-menu__item
-                                a.box-menu__link(href="#") Очистить
+                        .connect-me-block__buttons
+                            button.connect-me-block__button Отправить
+                            button.connect-me-block__button Очистить
 
         include ../sections/footer

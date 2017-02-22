@@ -1,13 +1,21 @@
-section.section.hero
+section(class=`hero_${pageName}`).section.hero
     .hero__bg
-        img(src="assets/img/bg/mountains_bg.jpg" alt="").hero__bg-img
+        img(src="assets/img/bg/mountains_bg.jpg" alt="mountains background").hero__bg-img
     .hero__container
-        img(src="assets/img/decor/portfolio_header.png" alt="").hero-title-pic
+        if pageName != "blog"
+            img(src="assets/img/decor/portfolio_header.png" alt="portfolio background").hero-title-pic
         .user
             .user__pic-container
-                img(src="assets/img/content/author.png" alt="").user__pic
-            .user__name #{$.site.author}
-            .user__desc #{$.site.name}
+                img(src="assets/img/content/author.png" alt="Фото автора").user__pic
+
+            if pageName == "blog"
+                .hero__section-title-container
+                    .section-title.section-title_blog(style="background-image: url('assets/img/decor/blog_header.svg')") Блог
+                    .hero__name Статьи, которые я написал
+            else
+                .user__name #{$.site.author}
+                .user__desc #{$.site.name}
+
     ul.hero-socials
         each item in $.socials
             li.hero__socials-item
@@ -17,5 +25,6 @@ section.section.hero
     a.hero__hamburger(href="#")
         svg(class=`svg-hamburger-dims`)
             use(xlink:href=`assets/img/sprite/sprite.svg#hamburger`)
-    if showTriangles
-        img.blog__hero-bg(src="assets/img/bg/blog_hero_bg.svg")
+    svg(viewBox="0 0 1200 100" preserveAspectRatio="none" class=`hero__bottom-triangles_${pageName}`).hero__bottom-triangles
+        polygon.leftTriangle(points="0,0 0,100 600,100")
+        polygon.rightTriangle(points="600,100, 1200, 100, 1200,0")

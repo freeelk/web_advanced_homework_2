@@ -21,3 +21,37 @@
 .connect-me-block__input-message {
   height: 139px;
 }
+
+.connect-me-block__buttons {
+  position: absolute;
+  bottom: 0px;
+  height: 45px;
+  width: 100%;
+  @extend %clearfix;
+
+  button:first-child {
+    border-left: none;
+  }
+}
+
+.connect-me-block__button{
+  width: 50%;
+  height: 45px;
+  padding: 0px;
+  margin: 0px;
+  outline: none;
+  color: #FFFFFF;
+  font-weight: bold;
+  background: rgba(#09b09e, 0.5);
+  border: none;
+  border-left: 1px solid #FFFFFF;
+  float: left;
+
+  &:hover {
+    background: rgba(#078d84, 0.7);
+  }
+
+}
+
+
+

@@ -1,7 +1,14 @@
 .hero {
-  height: 600px;
   overflow: hidden;
   position: relative;
+}
+
+.hero_about, .hero_works {
+  height: 600px;
+}
+
+.hero_blog {
+  height: 400px;
 }
 
 .hero__bg {
@@ -48,5 +55,40 @@
   }
   svg:hover {
     fill: #ffffff;
+  }
+}
+
+.hero__bottom-triangles {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  height: 100px;
+  margin: 0;
+}
+
+.hero__bottom-triangles_works {
+  .leftTriangle {
+    fill: #fbf8f1;
+  }
+  .rightTriangle {
+    fill: #fbf8f1;
+  }
+}
+
+.hero__bottom-triangles_blog {
+  .leftTriangle {
+    fill: #ffffff;
+  }
+  .rightTriangle {
+    fill: #ffffff;
+  }
+}
+
+.hero__bottom-triangles_about {
+  .leftTriangle {
+    fill: $white;
+  }
+  .rightTriangle {
+    fill: $beige;
   }
 }
