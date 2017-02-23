@@ -17,29 +17,25 @@ block content
             .about__col.about__col_right
                 .skills
                     .block-title Чем я могу быть вам полезен
-                    .skills_text.block-text!= $.usefull.text
-                    ul.skills-group
+                    .skills__text!= $.usefull.text
+                    .skills__groups
                         each skillGroup in $.usefull.areas
-                            li.skills-group__item
-                                .skill-group__title #{skillGroup.name}
-                                ul.skills-list
+                            .skills__group
+                                .skills__group-title #{skillGroup.name}
                                 each skill in skillGroup.skills
-                                    li.skills-list__item
                                     .skill
-                                        svg.skill__circle
-                                            circle(r="45" cx="50%" cy="50%" ).skill__circle_under
-                                            circle(r="45" cx="50%" cy="50%" ).skill__circle_above
+                                        svg.skill__svg
+                                            circle(r="45" cx="50%" cy="50%" ).skill__circle-under
+                                            circle(r="45" cx="50%" cy="50%" ).skill__circle-above
                                         .skill__name #{skill.name}
-
         section.section.map
             .map__google(id="map")
-            .map__box-over
-                .map__container
-                    .contacts
-                        .block-title.block-title_center Контакты
-                        ul.contacts__list
-                            - var contactsItems = [{name:'skype', value:"vvshelest"}, {name:'email', 'value':"freeelk@gmail.com"}, {'name':'phone', 'value':'+3080955888***'}, {'name':'address', 'value':'Украина, Сумская область, г. Тростянец'}]
-                            each item in contactsItems
-                                li.contacts__item(style=`background-image: url('/assets/img/sprite/${item.name}.svg');`) #{item.value}
-                .map__footer
-                    include ../sections/footer
+            .contacts
+                .block-title.block-title_center Контакты
+                .contacts__list
+                    each item in $.contacts
+                        .contacts__item
+                            svg(class=`svg-${item.name}-dims`).contacts__svg
+                                use(xlink:href=`assets/img/sprite/sprite.svg#${item.name}`)
+                            span.contacts__value #{item.value}
+    include ../sections/footer

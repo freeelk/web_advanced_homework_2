@@ -3,7 +3,10 @@ $mapHeight: 824px;
 .map {
   height: $mapHeight;
   overflow: hidden;
-  position: relative;
+  //position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .map__bg {
@@ -12,20 +15,16 @@ $mapHeight: 824px;
 }
 
 .map__container {
-  height: $mapHeight - $footerHeight;
+  height: 200px; // $mapHeight - $footerHeight;
+  width: 200px;
   position: relative;
-}
-
-.map__footer {
-  position: absolute;
-  bottom:0px;
-  width: 100%;
+  display: block;
 }
 
 .map__google{
-  height: $mapHeight; // - $footerHeight;
+  height: $mapHeight;
   width: 100%;
-  position: relative;
+  position: absolute;
 }
 
 .map__box-over {
@@ -34,3 +33,4 @@ $mapHeight: 824px;
   width: 100%;
   height: 100%;
 }
+

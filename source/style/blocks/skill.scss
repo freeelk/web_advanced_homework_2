@@ -5,25 +5,24 @@
   display:inline-block;
 }
 
-.skill__circle {
+svg.skill__svg {
   fill: none;
   width: 110px;
   height: 110px;
   display:block;
   stroke-width: 15;
-  position: absolute;
   left: 0;
   top: 0;
-}
 
-.skill__circle_under {
-  stroke: $skillBg;
-}
+  .skill__circle-under {
+    stroke: $skillBg;
+  }
 
-.skill__circle_above {
-  stroke: $skill;
-  stroke-dasharray: 197.82 282.6;
-  transition: all 1s;
+  .skill__circle-above {
+    stroke: $skill;
+    stroke-dasharray: 197.82 282.6;
+    transition: all 1s;
+  }
 }
 
 .skill__name {

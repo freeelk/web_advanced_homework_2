@@ -1,0 +1,14 @@
+.author
+    .author__pic-container
+        img(src="assets/img/content/author.png" alt="Фото автора").author__pic
+
+    if pageName == "index"
+        .author__name.author__name_greeting #{$.site.author}
+        .author__desc.author__desc_greeting #{$.site.name}
+    else if pageName == "blog"
+        .author__section-title-container
+            .section-title.section-title_blog(style="background-image: url('assets/img/decor/blog_header.svg')") Блог
+            .author__desc.author__desc_blog  Статьи, которые я написал
+    else
+        .author__name #{$.site.author}
+        .author__desc  #{$.site.name}

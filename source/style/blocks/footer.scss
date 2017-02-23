@@ -1,9 +1,11 @@
 $sidePadding: 30px;
-$socialsSize: 40px;
+$socialsSize: 45px;
 $socialsCount: 3;
 
 .footer {
   height: $footerHeight;
+  margin-top: -$footerHeight;
+  position: relative;
   background-color: rgba(#565b5f,0.8);
   width: 100%;
 }
@@ -39,34 +41,7 @@ $socialsCount: 3;
 .footer__socials-wrapper {
   float: right;
   width: $socialsSize * $socialsCount;
-}
-
-.footer__socials {
-  position: absolute;
-  top: 50%;
-  height: $socialsSize;
-  margin-top: -20px;
-}
-
-.footer__socials-item {
-  display: inline-block;
-}
-
-.footer__socials-link {
-  display: block;
-  width: $socialsSize;
-  height: $socialsSize;
-  padding-left: 8px;
-  background-repeat: no-repeat;
-  background-position: center center;
-  svg {
-    fill: #9ca8a8;
-    width: 40px;
-    height: 40px;
-  }
-  svg:hover {
-    fill: #ffffff;
-  }
+  height: 100%;
 }
 
 .footer__bottom-block {

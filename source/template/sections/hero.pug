@@ -4,24 +4,10 @@ section(class=`hero_${pageName}`).section.hero
     .hero__container
         if pageName != "blog"
             img(src="assets/img/decor/portfolio_header.png" alt="portfolio background").hero-title-pic
-        .user
-            .user__pic-container
-                img(src="assets/img/content/author.png" alt="Фото автора").user__pic
-
-            if pageName == "blog"
-                .hero__section-title-container
-                    .section-title.section-title_blog(style="background-image: url('assets/img/decor/blog_header.svg')") Блог
-                    .hero__name Статьи, которые я написал
-            else
-                .user__name #{$.site.author}
-                .user__desc #{$.site.name}
-
-    ul.hero-socials
-        each item in $.socials
-            li.hero__socials-item
-                a.hero__socials-link('href'=`${item.link}`)
-                    svg(class=`svg-${item.name}-dims`)
-                        use(xlink:href=`assets/img/sprite/sprite.svg#${item.name}`)
+        .hero__author-container
+            include  ../sections/author
+    ul.hero__socials
+        +socials('white')
     a.hero__hamburger(href="#")
         svg(class=`svg-hamburger-dims`)
             use(xlink:href=`assets/img/sprite/sprite.svg#hamburger`)

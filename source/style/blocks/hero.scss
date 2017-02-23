@@ -3,6 +3,11 @@
   position: relative;
 }
 
+.hero__author-container {
+  text-align: center;
+  @include centered();
+}
+
 .hero_about, .hero_works {
   height: 600px;
 }
@@ -25,25 +30,11 @@
   @include centered();
 }
 
-.hero-socials {
+.hero__socials {
   position: absolute;
   left: 30px;
   top: 30px;
-}
-
-.hero__socials-item {
-  display: inline-block;
-}
-
-.hero__socials-link {
-  display: block;
-  padding-left: 25px;
-  svg {
-    fill: rgba(#ffffff, 0.7);
-  }
-  svg:hover {
-    fill: #ffffff;
-  }
+  width: 120px;
 }
 
 .hero__hamburger {

@@ -1,26 +1,28 @@
 extends ../layout
+
 block variables
     - var title = $.site.author + " | " +  $.site.name + " | " + $.site.pages.blog
 block content
     .wrapper
         -var pageName = "blog"
-        include ../sections/hero
+                include ../sections/hero
 
-        section.section.blog
-            .wrapper.blog__wrapper
-                .blog__col.blog__col_left
-                    ul.blog__menu
-                        each item in $.blog
-                            if item.selected
-                                li.blog__menu-item.blog__menu-item_selected #{item.title}
-                            else
-                                li.blog__menu-item #{item.title}
-                .blog__col.blog__col_right
-                    ul.blog__menu
-                        each item in $.blog
-                            li.blog__menu-item
-                                h1.blog__menu-item-header #{item.title}
-                                .blog__menu-item-date #{item.date}
-                                .blog__menu-item-content!= item.content
+                section.section.blog
+                    .wrapper.blog__wrapper
+                        .blog__col.blog__col_left
+                            ul.blog__menu
+                                each item in $.blog
+                                    if item.selected
+                                        li.blog__menu-item.blog__menu-item_selected #{item.title}
+                                    else
+                                        li.blog__menu-item #{item.title}
+                        .blog__col.blog__col_right
+                            ul.blog__menu
+                                each item in $.blog
+                                    li.blog__menu-item
+                                        h1.blog__menu-item-header #{item.title}
+                                        .blog__menu-item-date #{item.date}
+                                        .blog__menu-item-content!= item.content
 
-        include ../sections/footer
+        .empty
+    include ../sections/footer

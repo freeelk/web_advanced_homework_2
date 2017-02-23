@@ -5,7 +5,8 @@ footer.footer
                 li.footer__menu-item
                     a.footer__menu-link(href=item.link)=item.label
         .footer__socials-wrapper
-            ul.footer__socials
+            +socials('white', true)
+            //ul.footer__socials
                 each item in $.socials
                     li.footer__socials-item
                         a.footer__socials-link(href=item.link target="_blank")

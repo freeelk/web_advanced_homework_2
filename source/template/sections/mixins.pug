@@ -1,0 +1,9 @@
+mixin socials(fill, inRound)
+    - var inRoundPostfix = inRound ? '_round' : ''
+
+    ul.socials
+        each item in $.socials
+            li.socials__item
+                a.socials__link('href'=`${item.link}` target="_blank")
+                    svg(class=`svg-${item.name}${inRoundPostfix}-dims socials__svg_${fill}`).socials__svg
+                        use(xlink:href=`assets/img/sprite/sprite.svg#${item.name}${inRoundPostfix}`)

@@ -1,0 +1,38 @@
+.author__pic-container {
+  width: 147px;
+  height: 147px;
+  border-radius: 50%;
+  margin-bottom: 25px;
+  overflow: hidden;
+  display: inline-block;
+  margin-top: 38px;
+}
+
+.author__section-title-container {
+  position: relative;
+}
+
+.author__name {
+  font-weight: bold;
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+
+.author__desc {
+  font-weight: 100;
+  margin-top: 0px;
+  padding-top: 0px;
+  margin-bottom: 25px;
+}
+
+.author__name, .author__desc {
+  color: #ffffff;
+}
+
+.author__name_greeting, .author__desc_greeting {
+  color: $textColor;
+}
+
+.author__desc_blog {
+    margin-top: -50px;
+}

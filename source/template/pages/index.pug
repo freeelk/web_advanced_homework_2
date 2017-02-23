@@ -1,6 +1,7 @@
 extends ../layout
 block variables
     - var title = $.site.author + " | " +  $.site.name + " | " + $.site.pages.index
+    - var pageName = "index"
 block content
     .wrapper
         section.section.greeting
@@ -9,16 +10,9 @@ block content
                 .greeting__container
                     button.greeting__athorizate Авторизоваться
                     .greeting-box
-                        .greeting-box__pic-container
-                            img(src="assets/img/content/author.png" alt="Фото автора").greeting-box__pic
-                        .greeting-box__name #{$.site.author}
-                        .greeting-box__desc #{$.site.name}
-                        ul.greeting-box__socials
-                            each item in $.socials
-                                li.greeting-box__socials-item
-                                    a.greeting-box__socials-link('href'=`${item.link}` target="_blank")
-                                        svg(class=`svg-${item.name}-dims`)
-                                            use(xlink:href=`assets/img/sprite/sprite.svg#${item.name}`)
+                        include  ../sections/author
+                        .greeting-box__socials
+                            +socials('green')
                         ul.box-menu
                             li.box-menu__item
                                 a.box-menu__link(href="/works.html") Мои работы

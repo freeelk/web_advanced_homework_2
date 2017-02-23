@@ -14,7 +14,24 @@
     }
   },
 
-
+  "contacts": [
+    {
+      "name": "skype",
+      "value": "vvshelest"
+    },
+    {
+      "name": "email",
+      "value": "freeelk@gmail.com"
+    },
+    {
+      "name": "phone",
+      "value": "+3080955888***"
+    },
+    {
+      "name": "address",
+      "value": "Украина, Сумская область, г. Тростянец"
+    }
+  ],
 
   "socials" : [
     {
@@ -128,24 +145,6 @@
     ]
   },
 
-  "contacts": [
-    {
-      "type": "skype",
-      "value": "vv_shelest"
-    },
-    {
-      "type": "email",
-      "value": "freeelk@gmail.com"
-    },
-    {
-      "type": "phone",
-      "value": "34545657676"
-    },
-    {
-      "type": "address",
-      "value": "Украина, Сумская область, г. Тростянец"
-    }
-  ],
 
   "feedbacks": [
     {
