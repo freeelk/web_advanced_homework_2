@@ -6,20 +6,24 @@ block content
         -var pageName = "works"
         include ../sections/hero
         section.section.works
-            .section-title(style="background-image: url('assets/img/decor/works_header.svg')")
-                | Мои работы
-            .wrapper.works__wrapper
-                .works__col.works__col_left
-                    .work-descr-block
-                        .block-title Сайт школы онлайн-образования
-                        .work-descr-block__technologies HTML, CSS, JAVASCRIPT
-                        button.work-descr-block__show-site Посмотреть сайт
-                .works__col.works__col_right
-                    .work-slider-block
-                        img.work-slider-block__current(src="/assets/img/content/work-1.png" alt="Пример сайта 1")
-                        .work-slider-block__switch
-                            img.work-slider-block__image.work-slider-block__image_left(src="/assets/img/content/work-2.png" alt="Пример сайта 2")
-                            img.work-slider-block__image.work-slider-block__image_right(src="/assets/img/content/work-3.png" alt="Пример сайта 3")
+            .section-title(style="background-image: url('assets/img/decor/works_header.svg')") Мои работы
+            .slider
+                .slider-descr
+                    .slider__descr-inner
+                        .slider__descr-title
+                            .block-title Сайт школы онлайн-образования
+                        .slider__descr-skills HTML, CSS, JAVASCRIPT
+                        .slider__deskr-btn-wrapper
+                            button.slider__deskr-btn Посмотреть сайт
+                .slider__display
+                    img.slider__display-img(src="/assets/img/content/work-1.png" alt="Пример сайта 1")
+                .slider__switches
+                    .slider__switch
+                        img.slider__switch-img(src="/assets/img/content/work-2.png" alt="Пример сайта 2")
+                    .slider__switch
+                        img.slider__switch-img(src="/assets/img/content/work-3.png" alt="Пример сайта 3")
+
+
         section.section.feedbacks
             .section-title(style="background-image: url('assets/img/decor/about_header.svg')")
                 | Что обо мне говорят

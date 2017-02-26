@@ -11,9 +11,10 @@ block content
                 .section-title(style="background-image: url('assets/img/decor/about_header.svg')")
                     | Обо мне
                 .about__inner
-                    img.about__pic(src="/assets/img/content/author_big.png" alt="Фото автора")
+                    .about__pic-container
+                        img.about__pic(src="/assets/img/content/author_big.png" alt="Фото автора")
                     .block-title Кто я
-                    .block-text!= $.aboutText
+                    .about__text!= $.aboutText
             .about__col.about__col_right
                 .skills
                     .block-title Чем я могу быть вам полезен

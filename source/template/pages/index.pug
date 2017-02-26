@@ -21,4 +21,8 @@ block content
                             li.box-menu__item
                                 a.box-menu__link(href="/blog.html") Блог
 
-                    .greeting-footer &copy; #{$.site.author} | #{$.site.motto} | #{$.site.date}
+                    footer.greeting-footer
+                        .greeting-footer__author &copy; #{$.site.author}
+                        .greeting-footer__second_line
+                            span.greeting-footer__motto #{$.site.motto}
+                            span.greeting-footer__date #{$.site.date}

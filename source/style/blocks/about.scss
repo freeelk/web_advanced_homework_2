@@ -1,13 +1,12 @@
 .about {
   @extend %clearfix;
   display: flex;
+  flex-flow: row wrap;
 }
 
 .about__col {
-  float: left;
   width: 50%;
   position: relative;
-  flex: 1;
   text-align: center;
 
   &_left {
@@ -37,14 +36,21 @@
 }
 
 .about__inner {
-  margin-left: 70px;
-  margin-right: 70px;
+  width: 80%;
   padding-bottom: 43px;
+  margin: 0 auto;
+}
+
+.about__pic-container {
+  width: 100%;
 }
 
 .about__pic {
-  width: 446px;
-  display: block;
-  margin: 0 auto;
+  max-width: 100%;
+}
+
+.about__text {
+  text-align: left;
+  color: $textColor;
 }
 

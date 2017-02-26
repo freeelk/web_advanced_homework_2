@@ -3,24 +3,3 @@
   background-color: #fbf8f1;
 }
 
-.works__wrapper {
-  display: flex;
-  min-height:  500px;
-}
-
-.works__col {
-  float: left;
-  width: 50%;
-  position: relative;
-  flex: 1;
-  text-align: center;
-
-  &_left {
-    background: $white;
-  }
-
-  &_right {
-    background: $beige;
-  }
-}
-

@@ -47,4 +47,13 @@
   text-align: center;
   color: #FFFFFF;
   width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.greeting-footer__motto, .greeting-footer__date{
+  &:before {
+    content: '\00a0\007C\00a0';
+  }
 }

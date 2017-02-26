@@ -29,3 +29,35 @@ $footerHeight: 148px;
     clear: both;
   }
 }
+
+//breakpoints-------------------------
+
+@mixin tv {
+  @media (min-width: 1200px) {
+    @content
+  }
+}
+
+@mixin desktop {
+  @media (max-width: 1200px) {
+    @content
+  }
+}
+
+@mixin laptop {
+  @media (max-width: 922px) {
+    @content
+  }
+}
+
+@mixin tablet {
+  @media (max-width: 768px) {
+    @content
+  }
+}
+
+@mixin smartphone {
+  @media (max-width: 480px) {
+    @content
+  }
+}
