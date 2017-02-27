@@ -4,22 +4,72 @@ block variables
     - var pageName = "index"
 block content
     .wrapper
+        .parallax(id='parallax')
+            img(src="assets/img/parallax/layer_10.png" alt="mountains background").greeting__bg-img.layer10
+            img(src="assets/img/parallax/layer_9.png" alt="mountains background").greeting__bg-img
+            img(src="assets/img/parallax/layer_8.png" alt="mountains background").greeting__bg-img
+            img(src="assets/img/parallax/layer_7.png" alt="mountains background").greeting__bg-img
+            img(src="assets/img/parallax/layer_6.png" alt="mountains background").greeting__bg-img
+            img(src="assets/img/parallax/layer_5.png" alt="mountains background").greeting__bg-img
+            img(src="assets/img/parallax/layer_4.png" alt="mountains background").greeting__bg-img
+            img(src="assets/img/parallax/layer_3.png" alt="mountains background").greeting__bg-img
+            img(src="assets/img/parallax/layer_2.png" alt="mountains background").greeting__bg-img
+            img(src="assets/img/parallax/layer_1.png" alt="mountains background").greeting__bg-img
         section.section.greeting
             .greeting__bg
-                img(src="assets/img/bg/mountains_bg.jpg" alt="mountains background").greeting__bg-img
+                //img(src="assets/img/bg/mountains_bg.jpg" alt="mountains background").greeting__bg-img
+
                 .greeting__container
-                    button.greeting__athorizate Авторизоваться
-                    .greeting-box
-                        include  ../sections/author
-                        .greeting-box__socials
-                            +socials('green')
-                        ul.box-menu
-                            li.box-menu__item
-                                a.box-menu__link(href="/works.html") Мои работы
-                            li.box-menu__item
-                                a.box-menu__link(href="/about.html") Обо мне
-                            li.box-menu__item
-                                a.box-menu__link(href="/blog.html") Блог
+                    button.greeting__athorizate(onclick="flipGreetingBox();") Авторизоваться
+                    .flip-container("id"="greeting-flip")
+                        .flipper
+                            .greeting-box.front
+                                include  ../sections/author
+                                .greeting-box__socials
+                                    +socials('green')
+                                ul.box-menu
+                                    li.box-menu__item
+                                        a.box-menu__link(href="/works.html") Мои работы
+                                    li.box-menu__item
+                                        a.box-menu__link(href="/about.html") Обо мне
+                                    li.box-menu__item
+                                        a.box-menu__link(href="/blog.html") Блог
+                            .greeting-box.back
+                                .block-title Авторизуйтесь
+
+                                .text-input__group
+                                    .text-input__group-addon.text-input__login
+                                    input.greeting-box__text-input(type="text" placeholder="Логин")
+                                .text-input__group
+                                    .text-input__group-addon.text-input__password
+                                    input.greeting-box__text-input(type="text" placeholder="Пароль")
+
+                                .greeting-box__checkbox-container
+                                    .checkbox-input
+                                        input(type="checkbox" id="no_robot" name="no_robot").checkbox-input__checkbox
+                                        label(for="no_robot").checkbox-input__label
+                                    .greeting-box__text-label Я человек
+                                .greeting-box__question Вы точно не робот?
+
+                                .greeting-box__radio-group
+                                    .greeting-box__radio-input
+                                        .radio-input
+                                            input(type="radio" value="1", id="norobot_yes" name="yes")
+                                            label(for="norobot_yes")
+                                        .greeting-box__text-label.greeting-box__text-label_radio Да
+                                    .greeting-box__radio-input
+                                        .radio-input
+                                            input(type="radio" value="1", id="norobot_no" name="yes")
+                                            label(for="norobot_no")
+                                        .greeting-box__text-label.greeting-box__text-label_radio Не уверен
+
+                                ul.box-menu
+                                    li.box-menu__item
+                                        a.box-menu__link(href="#") На главную
+                                    li.box-menu__item
+                                        a.box-menu__link(href="#") войти
+
+
 
                     footer.greeting-footer
                         .greeting-footer__author &copy; #{$.site.author}

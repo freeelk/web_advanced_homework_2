@@ -1,0 +1,42 @@
+$textInputHeight: 45px;
+$textInputWidth: 340px;
+
+.text-input__group {
+  width: $textInputWidth;
+  height: $textInputHeight;
+  display: flex;
+  margin: 0 auto;
+  margin-bottom: 20px;
+
+}
+
+.greeting-box__text-input {
+  width: $textInputWidth - $textInputHeight;
+  height: $textInputHeight;
+  padding-left: 20px;
+  background-color: #FFFFFF;
+  border: none;
+  border-radius: 5px;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+
+.text-input__group-addon {
+  height: $textInputHeight;
+  width: $textInputHeight;
+  border-radius: 5px;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  border: none;
+  background-color: #f0efea;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.text-input__login {
+  background-image: url('/assets/img/icons/login.svg');
+}
+
+.text-input__password {
+  background-image: url('/assets/img/icons/password.svg');
+}

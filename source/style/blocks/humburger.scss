@@ -1,0 +1,56 @@
+$button-height: 27px;
+$button-width: 35px;
+$color-main: #ffffff;
+$color-active: #ffffff;
+
+.hamburger {
+  position: absolute;
+  top: 5%;
+  right: 2%;
+  height: $button-height;
+  width: $button-width;
+  cursor: pointer;
+  z-index: 100;
+  opacity: 0.5;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &_active {
+    .hamburger__top {
+      transform: translateY(11px) translateX(0) rotate(45deg);
+      background: $color-active;
+    }
+    .hamburger__middle {
+      opacity: 0;
+      background: $color-active;
+    }
+
+    .hamburger__bottom {
+      transform: translateY(-11px) translateX(0) rotate(-45deg);
+      background: $color-active;
+    }
+  }
+
+  span {
+    background: $color-main;
+    border: none;
+    height: 5px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition:  all .35s ease;
+    cursor: pointer;
+
+    &:nth-of-type(2) {
+      top: 11px;
+    }
+
+    &:nth-of-type(3) {
+      top: 22px;
+    }
+  }
+}
+

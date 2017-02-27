@@ -17,17 +17,32 @@
 }
 
 .hero__bg {
-  @include centered(X);
-  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1270px;
+
+
+}
+
+.hero__bg-img{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .hero__container {
-  @include centered(Y);
-  width: 100%;
+
 }
 
 .hero-title-pic {
-  @include centered();
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 80%;
 }
 
 .hero__socials {

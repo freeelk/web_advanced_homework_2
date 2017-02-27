@@ -1,16 +1,47 @@
-.greeting-box {
-  width: 380px;
-  height: 394px;
-  display: block;
-  text-align: center;
-  border-radius: 10px;
-  overflow: hidden;
-  @include centered();
-  background: rgba(#fcfcfc, 0.5);
-}
-
 .greeting-box__socials {
   height: 25px;
   width: 140px;
   margin: 0 auto;
+}
+
+.greeting-box  {
+  width: 380px;
+  height: 394px;
+  display: block;
+  text-align: center;
+  background: rgba(#fcfcfc, 0.5);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.greeting-box__checkbox-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.greeting-box__text-label {
+  color: $textColor;
+}
+
+.greeting-box__question {
+  color: $textColor;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.greeting-box__radio-group {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 10px;
+}
+
+.greeting-box__radio-input {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.greeting-box__text-label_radio {
+  margin-left: 15px;
 }

@@ -1,16 +1,20 @@
 section(class=`hero_${pageName}`).section.hero
     .hero__bg
         img(src="assets/img/bg/mountains_bg.jpg" alt="mountains background").hero__bg-img
+    if pageName != "blog"
+        img(src="assets/img/decor/portfolio_header.png" alt="portfolio background").hero-title-pic
     .hero__container
-        if pageName != "blog"
-            img(src="assets/img/decor/portfolio_header.png" alt="portfolio background").hero-title-pic
+
         .hero__author-container
             include  ../sections/author
     ul.hero__socials
         +socials('white')
-    a.hero__hamburger(href="#")
-        svg(class=`svg-hamburger-dims`)
-            use(xlink:href=`assets/img/sprite/sprite.svg#hamburger`)
+    .hero__hamburger
+        .hamburger(id="hero-hamburger")
+            span.hamburger__top
+            span.hamburger__middle
+            span.hamburger__bottom
+
     svg(viewBox="0 0 1200 100" preserveAspectRatio="none" class=`hero__bottom-triangles_${pageName}`).hero__bottom-triangles
         polygon.leftTriangle(points="0,0 0,100 600,100")
         polygon.rightTriangle(points="600,100, 1200, 100, 1200,0")

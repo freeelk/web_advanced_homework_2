@@ -1,0 +1,40 @@
+.radio-input {
+  width: 20px;
+  position: relative;
+}
+
+.radio-input label {
+  box-sizing: content-box;
+  cursor: pointer;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 0;
+  left: 0;
+  color: #ffffff;
+  background:#ffffff;
+  border-radius: 50%;
+  border: 1px solid #cccccc;
+}
+
+.radio-input label:after {
+  opacity: 0;
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #2cc7a7;
+  top: 5px;
+  left: 5px;
+  border-radius: 50%;
+  border-top: none;
+  border-right: none;
+}
+
+.radio-input input[type=radio] {
+  opacity: 0;
+}
+
+.radio-input input[type=radio]:checked + label:after {
+  opacity: 1;
+}
