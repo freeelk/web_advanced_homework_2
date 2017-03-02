@@ -109,3 +109,33 @@ function menuClick() {
     this.classList.toggle('hamburger_active');
     console.log('click');
 }
+
+
+/**
+ * Blur
+ * @type {{set}}
+ */
+var blur = (function () {
+    var wrapper = document.querySelector('.connect-me');
+    var form = document.querySelector('.connect-me__blur');
+
+    return {
+        set: function() {
+            var posLeft = -wrapper.offsetLeft;
+            var posTop =  -625;
+            var blurCss = form.style;
+
+            blurCss.backgroundPosition = posLeft + 'px ' + posTop + 'px';
+        }
+    }
+}());
+
+
+window.addEventListener('load', function(){
+    blur.set();
+});
+
+
+window.onresize = function() {
+    blur.set();
+}

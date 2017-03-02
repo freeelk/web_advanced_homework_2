@@ -1,17 +1,47 @@
 .feedbacks {
   text-align: center;
+  position: relative;
+  overflow: hidden;
 }
 
-.feedbacks__wrapper {
-  margin-top: 30px;
-  background-image: url('/assets/img/bg/oсean_bg.jpg');
-  background-repeat: no-repeat;
-  background-position: center;
+.feedbacks__bg {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 660px;
+  z-index: -1;
+}
 
+.feedbacks__bg-outer {
+  height: 900px;
+  position: relative;
+}
+
+.feedbacks__bg-inner {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.feedbacks__bg-img {
+  bottom: 0;
+  left: 0;
+  width: 2500px;
+  height: 1529px;
+}
+
+
+.feedbacks__connect-me {
+  height: 660px;
+}
+
+.feedbacs__title {
+  height: 200px;
 }
 
 .feedbacks__items {
-  width: 70%;
+  height: 100%;
+  width: 80%;
   margin: 0 auto;
   @extend %clearfix;
 }

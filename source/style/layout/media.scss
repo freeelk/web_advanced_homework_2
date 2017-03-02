@@ -28,6 +28,10 @@
     font-size: 14px;
   }
 
+  .section-title {
+    font-size: 65px;
+  }
+
   //about ----
   .about__col {
     width: 100%;
@@ -116,6 +120,10 @@
 @include smartphone {
   body {
     font-size: 13px;
+  }
+
+  .section-title {
+    font-size: 45px;
   }
 
   //index ----------------

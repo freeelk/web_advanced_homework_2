@@ -25,28 +25,37 @@ block content
 
 
         section.section.feedbacks
-            .section-title(style="background-image: url('assets/img/decor/about_header.svg')")
-                | Что обо мне говорят
-            .feedbacks__wrapper
-                .feedbacks__items
-                    each feedback in $.feedbacks
-                        .feedbacks__feedback
-                            .feedbacks__feedback-content=feedback.content
-                            .feedbacks__feedback-bottom
-                                .feedbacks__feedback-image-container
-                                    img.feedbacks__feedback-image(src=`/assets/img/content/${feedback.photo}` alt="Фото автора отзыва")
-                                .feedbacks__feedback-author-container
-                                    .feedbacks__feedback-author=feedback.author
-                                    .feedbacks__feedback-author-state=feedback.about
+            .feedbacs__title
+                .section-title(style="background-image: url('assets/img/decor/about_header.svg')")
+                    | Что обо мне говорят
+            .feedbacks__items
+                each feedback in $.feedbacks
+                    .feedbacks__feedback
+                        .feedbacks__feedback-content=feedback.content
+                        .feedbacks__feedback-bottom
+                            .feedbacks__feedback-image-container
+                                img.feedbacks__feedback-image(src=`/assets/img/content/${feedback.photo}` alt="Фото автора отзыва")
+                            .feedbacks__feedback-author-container
+                                .feedbacks__feedback-author=feedback.author
+                                .feedbacks__feedback-author-state=feedback.about
 
-                .wrapper.feedbacks__connect-me-wrapper
-                    .connect-me-block
-                        .block-title Связаться со мной
+            .feedbacks__bg
+                .feedbacks__bg-outer
+                    .feedbacks__bg-inner
+                        img(src="/assets/img/bg/oсean_bg.jpg" alt="").feedbacks__bg-img
+
+
+            .feedbacks__connect-me
+                .connect-me
+                    .connect-me__blur-wrapper
+                        .connect-me__blur
+                    .block-title Связаться со мной
+                    .connect-me-block__inputs
                         input.connect-me-block__input(type="text" placeholder="Имя")
                         input.connect-me-block__input(type="text" placeholder="Email")
                         input.connect-me-block__input.connect-me-block__input-message(type="text" placeholder="Ваше сообщение")
-                        .connect-me-block__buttons
-                            button.connect-me-block__button Отправить
-                            button.connect-me-block__button Очистить
+                    .connect-me-block__buttons
+                        button.connect-me-block__button Отправить
+                        button.connect-me-block__button Очистить
         .empty
     include ../sections/footer

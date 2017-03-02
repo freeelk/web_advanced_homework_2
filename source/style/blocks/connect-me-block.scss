@@ -1,12 +1,37 @@
-.connect-me-block {
+.connect-me {
+  top: 80px;
+  left: 50%;
   width: 380px;
-  height: 436px;
-  display: block;
-  text-align: center;
+  height: 438px;
+  margin-left: -190px;
+  overflow: hidden;
+  position: relative;
+}
+
+.connect-me__blur-wrapper {
+  width: 380px;
+  height: 438px;
+  position: absolute;
+  top: 0;
+  left: 0;
   border-radius: 10px;
   overflow: hidden;
-  @include centered();
-  background: rgba(#fcfcfc, 0.5);
+}
+
+.connect-me__blur{
+  width: 100%;
+  height: 100%;
+  background: url('/assets/img/bg/oсean_bg.jpg') no-repeat;
+  background-position: 500px -625px;
+  background-size: 2500px 1529px;
+  filter: blur(3px);
+}
+
+.connect-me-block__inputs {
+  position: absolute;
+  top: 100px;
+  height: 235px;
+  width: 100%;
 }
 
 .connect-me-block__input {
@@ -27,6 +52,9 @@
   bottom: 0px;
   height: 45px;
   width: 100%;
+  overflow: hidden;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
   @extend %clearfix;
 
   button:first-child {
@@ -52,6 +80,7 @@
   }
 
 }
+
 
 
 
