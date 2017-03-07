@@ -28,6 +28,23 @@
     &:after {
       right: $dashMargin;
     }
+
+    &_overlay {
+      padding: 20px 80px;
+      font-size: 40px;
+      &:before, &:after {
+        width: 0px;
+        transition: .35s;
+      }
+
+      &:hover {
+        &:before, &:after {
+          width: 22px;
+          background: #ffffff;
+        }
+      }
+
+    }
 }
 
 

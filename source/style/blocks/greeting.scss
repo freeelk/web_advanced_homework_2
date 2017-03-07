@@ -46,7 +46,8 @@
 .greeting__athorizate:hover,
 .greeting__athorizate:active {
   background-color: #fff;
-  color: #000;
+  opacity: 0.7;
+  color: $textColor;
 }
 
 .greeting-footer {

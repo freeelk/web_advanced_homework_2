@@ -3,9 +3,10 @@
 /**
  * Google map
  */
-function initMap(mapContainer) {
+function initMap() {
     var markerPos = {lat: 50.479144, lng: 34.965221};
     var center = {lat: 47.589144, lng: 28.965221};
+    var mapContainer =document.getElementById('map');
 
     if (!mapContainer) {
         return;

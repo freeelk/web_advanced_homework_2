@@ -3,7 +3,7 @@ $mapHeight: 824px;
 .map {
   height: $mapHeight;
   overflow: hidden;
-  //position: relative;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,6 +11,7 @@ $mapHeight: 824px;
 
 .map__bg {
   @include centered(X);
+  top: 50%;
   width: 100%;
 }
 
@@ -24,7 +25,7 @@ $mapHeight: 824px;
 .map__google{
   height: $mapHeight;
   width: 100%;
-  position: absolute;
+  position: relative;
 }
 
 .map__box-over {

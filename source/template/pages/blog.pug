@@ -9,20 +9,27 @@ block content
 
                 section.section.blog
                     .wrapper.blog__wrapper
-                        .blog__col.blog__col_left
-                            ul.blog__menu
+                        aside.blog__col.blog__col_left
+                            .blog__wrap-menu
+                                ul.blog__menu
+                                    each item in $.blog
+                                        if item.selected
+                                            li.blog__menu-item.blog__menu-item_selected #{item.title}
+                                        else
+                                            li.blog__menu-item #{item.title}
+                        main.blog__col.blog__col_right
+                            .blog__content
                                 each item in $.blog
-                                    if item.selected
-                                        li.blog__menu-item.blog__menu-item_selected #{item.title}
-                                    else
-                                        li.blog__menu-item #{item.title}
-                        .blog__col.blog__col_right
-                            ul.blog__menu
-                                each item in $.blog
-                                    li.blog__menu-item
-                                        h1.blog__menu-item-header #{item.title}
-                                        .blog__menu-item-date #{item.date}
-                                        .blog__menu-item-content!= item.content
+                                    article.blog__item.news
+                                        h1.blog__item-header #{item.title}
+                                        .blog__item-date #{item.date}
+                                        .blog__item-content!= item.content
 
         .empty
     include ../sections/footer
+    .slide-menu("id"="slide-menu").slide-menu_collapse
+        .slide-menu-wrapper
+            .slide-menu__handler
+            ul.blog__menu
+                each item in $.blog
+                    li.blog__menu-item.blog__menu-item_slide-menu #{item.title}

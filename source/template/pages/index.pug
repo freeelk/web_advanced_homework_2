@@ -4,8 +4,12 @@ block variables
     - var pageName = "index"
 block content
     .wrapper
+        section.preloader(id="preloader")
+            .preloader__spinner
+                .preloader__animation
+                .preloader__percents(id="preloader-percents") 0%
         .parallax(id='parallax')
-            img(src="assets/img/parallax/layer_10.png" alt="mountains background").greeting__bg-img.layer10
+            img(src="assets/img/parallax/layer_10.png" alt="mountains background").greeting__bg-img
             img(src="assets/img/parallax/layer_9.png" alt="mountains background").greeting__bg-img
             img(src="assets/img/parallax/layer_8.png" alt="mountains background").greeting__bg-img
             img(src="assets/img/parallax/layer_7.png" alt="mountains background").greeting__bg-img
@@ -17,8 +21,6 @@ block content
             img(src="assets/img/parallax/layer_1.png" alt="mountains background").greeting__bg-img
         section.section.greeting
             .greeting__bg
-                //img(src="assets/img/bg/mountains_bg.jpg" alt="mountains background").greeting__bg-img
-
                 .greeting__container
                     button.greeting__athorizate(id="greeting__athorizate") Авторизоваться
                     .flip-container("id"="greeting-flip")
@@ -34,15 +36,15 @@ block content
                                         a.box-menu__link(href="/about.html") Обо мне
                                     li.box-menu__item
                                         a.box-menu__link(href="/blog.html") Блог
-                            .greeting-box.back
-                                .block-title Авторизуйтесь
-
+                            form.greeting-box.back(name="authorization" id="authorization")
+                                .block-title.greeting-box__title Авторизуйтесь
+                                .greeting-box__validation(id="validation-message")
                                 .text-input__group
                                     .text-input__group-addon.text-input__login
-                                    input.greeting-box__text-input(type="text" placeholder="Логин")
+                                    input.greeting-box__text-input(type="text" name="login" placeholder="Логин" required)
                                 .text-input__group
                                     .text-input__group-addon.text-input__password
-                                    input.greeting-box__text-input(type="text" placeholder="Пароль")
+                                    input.greeting-box__text-input(type="password" name="password" placeholder="Пароль" required)
 
                                 .greeting-box__checkbox-container
                                     .checkbox-input
@@ -54,20 +56,18 @@ block content
                                 .greeting-box__radio-group
                                     .greeting-box__radio-input
                                         .radio-input
-                                            input(type="radio" value="1", id="norobot_yes" name="yes")
-                                            label(for="norobot_yes")
+                                            input(type="radio" value="1", id="no_robot_radio_yes" name="no_robot_radio")
+                                            label(for="no_robot_radio_yes")
                                         .greeting-box__text-label.greeting-box__text-label_radio Да
                                     .greeting-box__radio-input
                                         .radio-input
-                                            input(type="radio" value="1", id="norobot_no" name="yes")
-                                            label(for="norobot_no")
+                                            input(type="radio" value="0", id="no_robot_radio_no" name="no_robot_radio")
+                                            label(for="no_robot_radio_no")
                                         .greeting-box__text-label.greeting-box__text-label_radio Не уверен
 
-                                ul.box-menu
-                                    li.box-menu__item
-                                        a.box-menu__link(href="#") На главную
-                                    li.box-menu__item
-                                        a.box-menu__link(href="#") войти
+                                .greeting-box__buttons
+                                    input(type="button" value="На главную" "id"="to-index-page").greeting-box__button
+                                    input(type="submit" value="Войти").greeting-box__button
 
 
 
@@ -76,3 +76,4 @@ block content
                         .greeting-footer__second_line
                             span.greeting-footer__motto #{$.site.motto}
                             span.greeting-footer__date #{$.site.date}
+

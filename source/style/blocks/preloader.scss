@@ -1,0 +1,81 @@
+
+
+/* --------- preloader --------- */
+
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  background: $green;
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 2s, opacity 2s linear;
+}
+
+.preloader__spinner {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.preloader__percents {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+}
+
+.preloader__animation {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  animation: spin 2s linear infinite;
+
+  &, &:before, &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    border: 3px solid transparent;
+    border-radius: 50%;
+    border-top-color: #fff;
+  }
+
+  &:before {
+    $margin: 13px;
+
+    top: $margin;
+    left: $margin;
+    right: $margin;
+    bottom: $margin;
+    animation: spin 1.5s linear infinite;
+  }
+
+  &:after {
+    $margin: 5px;
+
+    top: $margin;
+    left: $margin;
+    right: $margin;
+    bottom: $margin;
+    animation: spin 3s linear infinite;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}

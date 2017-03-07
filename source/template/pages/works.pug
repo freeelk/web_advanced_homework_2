@@ -11,18 +11,23 @@ block content
                 .slider-descr
                     .slider__descr-inner
                         .slider__descr-title
-                            .block-title Сайт школы онлайн-образования
-                        .slider__descr-skills HTML, CSS, JAVASCRIPT
+                            .block-title(id='slider-title') Сайт школы онлайн-образования
+                        .slider__descr-skills(id='slider-skills') HTML, CSS, JAVASCRIPT
                         .slider__deskr-btn-wrapper
-                            button.slider__deskr-btn Посмотреть сайт
+                            a.slider__deskr-link(href="#" id="slider-link" target="_blank")
+                                button.slider__deskr-btn Посмотреть сайт
                 .slider__display
-                    img.slider__display-img(src="/assets/img/content/work-1.png" alt="Пример сайта 1")
+                    img.slider__display-img(src="/assets/img/content/slider/1.png" alt="Пример сайта 1" id="slider-preview")
                 .slider__switches
+                    .slider__switch-bg-gray
                     .slider__switch
-                        img.slider__switch-img(src="/assets/img/content/work-2.png" alt="Пример сайта 2")
-                    .slider__switch
-                        img.slider__switch-img(src="/assets/img/content/work-3.png" alt="Пример сайта 3")
-
+                        .slider__switch-bg.slider__switch-bg-left(id="slider__go-up")
+                        img.slider__switch-img.slider__switch-img_left_shown(src="/assets/img/content/slider/1.png" alt="Пример сайта 2" id="slider-next")
+                        img.slider__switch-img.slider__switch-img_left_below(src="/assets/img/content/slider/2.png" alt="Пример сайта 2" id="slider-next1")
+                    .slider__switch.slider__switch_right
+                        .slider__switch-bg.slider__switch-bg-right(id="slider__go-down")
+                        img.slider__switch-img.slider__switch-img_right_above(src="/assets/img/content/slider/3.png" alt="Пример сайта 2" id="slider-next0")
+                        img.slider__switch-img.slider__switch-img_right_shown(src="/assets/img/content/slider/4.png" alt="Пример сайта 3" id="slider-prev")
 
         section.section.feedbacks
             .feedbacs__title
@@ -45,17 +50,18 @@ block content
                         img(src="/assets/img/bg/oсean_bg.jpg" alt="").feedbacks__bg-img
 
 
-            .feedbacks__connect-me
+            form.feedbacks__connect-me(name="connect-me-form", id="connect-me-form")
                 .connect-me
                     .connect-me__blur-wrapper
                         .connect-me__blur
                     .block-title Связаться со мной
+                    .connect-me__validation-message(id='validation-message')
                     .connect-me-block__inputs
-                        input.connect-me-block__input(type="text" placeholder="Имя")
-                        input.connect-me-block__input(type="text" placeholder="Email")
-                        input.connect-me-block__input.connect-me-block__input-message(type="text" placeholder="Ваше сообщение")
+                        input.connect-me-block__input(name="name" id="name" type="text" placeholder="Имя" required)
+                        input.connect-me-block__input(name="email" id="email" type="email" placeholder="Email" required)
+                        input.connect-me-block__input.connect-me-block__input-message(name="message" id="message" type="text" placeholder="Ваше сообщение" required)
                     .connect-me-block__buttons
-                        button.connect-me-block__button Отправить
-                        button.connect-me-block__button Очистить
+                        input(type="submit" value="Отправить").connect-me-block__button
+                        input(type="reset" value="Очистить").connect-me-block__button
         .empty
     include ../sections/footer

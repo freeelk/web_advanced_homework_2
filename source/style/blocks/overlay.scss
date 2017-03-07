@@ -1,0 +1,85 @@
+@import url(http://fonts.googleapis.com/css?family=Vollkorn|Roboto);
+
+$color-main: #FF5252;
+$color-active: #FFF;
+$color-link: #FFF;
+
+
+.overlay {
+  position: fixed;
+  background: $green;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .35s, visibility .35s, height .35s;
+  overflow: hidden;
+  z-index: 10;
+
+  &.open {
+    opacity: .95;
+    visibility: visible;
+    height: 100%;
+
+    li {
+      animation: fadeInRight .5s ease forwards;
+      animation-delay: .35s;
+
+      &:nth-of-type(2) {
+        animation-delay: .4s;
+      }
+      &:nth-of-type(3) {
+        animation-delay: .45s;
+      }
+      &:nth-of-type(4) {
+        animation-delay: .50s;
+      }
+    }
+  }
+  nav {
+    position: relative;
+    height: 70%;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    display: inline-block;
+    position: relative;
+    height: 100%;
+
+    li {
+      display: block;
+      height: 25%;
+      height: calc(100% / 4);
+      min-height: 50px;
+      position: relative;
+      opacity: 0;
+
+      a {
+        display: block;
+        position: relative;
+        color: $color-link;
+        text-decoration: none;
+        overflow: hidden;
+
+      }
+    }
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    left: 20%;
+  }
+  100% {
+    opacity: 1;
+    left: 0;
+  }
+}

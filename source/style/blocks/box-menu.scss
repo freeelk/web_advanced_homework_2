@@ -20,6 +20,10 @@
 }
 
 .box-menu__link {
+  padding: 0px;
+  margin: 0px;
+  outline: none;
+
   width: 1000px;
   display: table-cell;
   vertical-align: middle;
@@ -33,3 +37,31 @@
   }
 }
 
+.greeting-box__buttons {
+  position: absolute;
+  bottom: 0px;
+  height: 45px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.greeting-box__button {
+  width: 50%;
+  color: #FFFFFF;
+  font-weight: bold;
+  padding: 0px;
+  margin: 0px;
+  border:0px;
+  outline: none;
+  background: rgba(#09b09e, 0.5);
+  border-left: 1px solid #FFFFFF;
+
+  &:first-child {
+    border-left: none;
+  }
+
+  &:hover {
+    background: rgba(#078d84, 0.7);
+  }
+}

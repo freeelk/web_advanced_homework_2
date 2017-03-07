@@ -17,19 +17,24 @@
   "contacts": [
     {
       "name": "skype",
-      "value": "vvshelest"
+      "value": "vvshelest",
+      "link": "skype:vvshelest?userinfo"
+
     },
     {
       "name": "email",
-      "value": "freeelk@gmail.com"
+      "value": "freeelk@gmail.com",
+      "link": "mailto://freeelk@gmail.com"
     },
     {
       "name": "phone",
-      "value": "+3080955888***"
+      "value": "+3080955888034",
+      "link": "callto://+3080955888534"
     },
     {
       "name": "address",
-      "value": "Украина, Сумская область, г. Тростянец"
+      "value": "Украина, Сумская область, г. Тростянец",
+      "link": ""
     }
   ],
 

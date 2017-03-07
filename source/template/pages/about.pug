@@ -36,7 +36,17 @@ block content
                 .contacts__list
                     each item in $.contacts
                         .contacts__item
-                            svg(class=`svg-${item.name}-dims`).contacts__svg
-                                use(xlink:href=`assets/img/sprite/sprite.svg#${item.name}`)
-                            span.contacts__value #{item.value}
+                            if item.link !=''
+                                a.contacts__link(href=`${item.link}`)
+                                    svg(class=`svg-${item.name}-dims`).contacts__svg
+                                        use(xlink:href=`assets/img/sprite/sprite.svg#${item.name}`)
+                                    span.contacts__value #{item.value}
+                            else
+                                .contacts__link
+                                    svg(class=`svg-${item.name}-dims`).contacts__svg
+                                        use(xlink:href=`assets/img/sprite/sprite.svg#${item.name}`)
+                                    span.contacts__value #{item.value}
+
+
+
     include ../sections/footer

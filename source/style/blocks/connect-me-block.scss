@@ -8,6 +8,14 @@
   position: relative;
 }
 
+.connect-me__validation-message {
+  position: absolute;
+  top: 73px;
+  width: 100%;
+  text-align: center;
+  color: red;
+}
+
 .connect-me__blur-wrapper {
   width: 380px;
   height: 438px;
@@ -41,6 +49,7 @@
   border: none;
   margin-bottom: 18px;
   padding: 15px;
+  outline: none;
 }
 
 .connect-me-block__input-message {
@@ -57,7 +66,7 @@
   border-bottom-right-radius: 10px;
   @extend %clearfix;
 
-  button:first-child {
+  input:first-child {
     border-left: none;
   }
 }

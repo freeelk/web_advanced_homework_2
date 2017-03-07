@@ -1,0 +1,38 @@
+$slideMenuWidth: 300px;
+$slideMenuHandleSize: 20px;
+
+
+.slide-menu {
+  position: fixed;
+  width: 70%;
+  height: 100vh;
+  background-color: $green;
+  left: 0px;
+  top: 0px;
+  opacity: .95;
+  transition: width .35s;
+}
+
+.slide-menu_collapse {
+  width: 0%;
+  font-size: 0;
+}
+
+.slide-menu-wrapper {
+  width: 100%;
+  height: 100%;
+  padding: 5%;
+  text-align: right;
+  position: relative;
+}
+
+.slide-menu__handler {
+  position: absolute;
+  right: -$slideMenuHandleSize;
+  top: 50%;
+  width: $slideMenuHandleSize;
+  height: $slideMenuHandleSize * 2;
+  background: $green;
+  border-bottom-right-radius: $slideMenuHandleSize * 2;
+  border-top-right-radius: $slideMenuHandleSize * 2;
+}

@@ -1,9 +1,11 @@
 
 .contacts {
+  position: absolute;
   width: 380px;
   height: 290px;
   z-index: 100;
-  margin-top: -$footerHeight;
+  @include centered();
+  top: 40%;
 
   text-align: center;
   border-radius: 10px;
@@ -14,13 +16,17 @@
   text-align: left;
 }
 
-.contacts__item {
-  color: #9ca7ad;
-  font-weight: bold;
+.contacts__link{
   height: 24px;
   padding-left: 35px;
   margin-bottom: 18px;
+  color: #9ca7ad;
   display: flex;
+}
+
+.contacts__item {
+
+  font-weight: bold;
 }
 
 .contacts__value {

@@ -9,17 +9,43 @@
   .greeting__athorizate {
     margin-right: 10%;
   }
+
+  //blog-----------------
+  .blog__col_left {
+      display: block;
+  }
+
+  .slide-menu {
+    display: none;
+  }
 }
 
 @include desktop {
   body {
     font-size: 16px;
   }
+
+  //blog-----------------
+  .blog__col_left {
+    display: block;
+  }
+
+  .slide-menu {
+    display: none;
+  }
 }
 
 @include laptop {
   body {
     font-size: 15px;
+  }
+
+  //blog-----------------
+  .blog__col_left {
+    display: block;
+  }
+  .slide-menu {
+    display: none;
   }
 }
 
@@ -90,10 +116,14 @@
       display: none;
     }
     &_right {
-      padding-left: 3%;
-      padding-right: 3%;
+      padding-left: 5%;
+      padding-right: 10%;
       width: 100%;
     }
+  }
+
+  .slide-menu {
+    display: block;
   }
 
   //footer
@@ -204,10 +234,14 @@
       display: none;
     }
     &_right {
-      padding-left: 1%;
-      padding-right: 1%;
+      padding-left: 5%;
+      padding-right: 10%;
       width: 100%;
     }
+  }
+
+  .slide-menu {
+    display: block;
   }
 
     //footer

@@ -18,3 +18,11 @@ section(class=`hero_${pageName}`).section.hero
     svg(viewBox="0 0 1200 100" preserveAspectRatio="none" class=`hero__bottom-triangles_${pageName}`).hero__bottom-triangles
         polygon.leftTriangle(points="0,0 0,100 600,100")
         polygon.rightTriangle(points="600,100, 1200, 100, 1200,0")
+
+.overlay(id="overlay")
+    nav.overlay-menu
+        ul.overlay__list
+            each item in $.footerMenu
+                li.overlay__list-item
+                    .block-title.block-title_overlay
+                        a.overlay__link(href=item.link)=item.label

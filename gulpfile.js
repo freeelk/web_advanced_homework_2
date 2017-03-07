@@ -38,6 +38,7 @@ $.gulp.task('default', $.gulp.series(
         'js:process',
         'copy:image',
         'copy:font',
+        'copy:google-map-verify',
         'css:foundation'
     ),
     $.gulp.parallel(
