@@ -32,4 +32,7 @@ block content
             .slide-menu__handler
             ul.blog__menu
                 each item in $.blog
-                    li.blog__menu-item.blog__menu-item_slide-menu #{item.title}
+                    if item.selected
+                        li.blog__menu-item.slide__menu-item.blog__menu-item_slide-menu.blog__menu-item_slide-menu_selected #{item.title}
+                    else
+                        li.blog__menu-item.slide__menu-item.blog__menu-item_slide-menu #{item.title}

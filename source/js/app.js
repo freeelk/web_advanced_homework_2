@@ -140,15 +140,18 @@ let templateElements = {
  * Слайдер сайтов на странице Works
  *
  */
-let sliderGoUp = document.getElementById('slider__go-up');
-let sliderGoDown = document.getElementById('slider__go-down');
+window.addEventListener('load', function () {
+    let sliderGoUp = document.getElementById('slider__go-up');
+    let sliderGoDown = document.getElementById('slider__go-down');
 
-if (sliderGoUp && sliderGoDown) {
-    let worksSlider = new WorksSlider(data, templateElements);
-    worksSlider.init();
-    document.getElementById('slider__go-up').addEventListener("click", ()=> worksSlider.next());
-    document.getElementById('slider__go-down').addEventListener("click", ()=> worksSlider.next());
-}
+    if (sliderGoUp && sliderGoDown) {
+        let worksSlider = new WorksSlider(data, templateElements);
+        worksSlider.init();
+        document.getElementById('slider__go-up').addEventListener("click", ()=> worksSlider.next());
+        document.getElementById('slider__go-down').addEventListener("click", ()=> worksSlider.next());
+    }
+});
+
 
 
 /**

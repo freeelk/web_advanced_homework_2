@@ -1,8 +1,12 @@
 'use strict';
 
+
+
+
 var scrollMenu = (function () {
     var $news = $('.news'),
         $item = $('.blog__menu-item'),
+        $itemSlide = $('.blog__menu-item'),
         $wrapMenu = $('.blog__wrap-menu'),
         body = document.body,
         isPositionArticle = [],
@@ -35,6 +39,11 @@ var scrollMenu = (function () {
             var scroll = window.pageYOffset;
             for (let i = 0; i < isPositionArticle.length; i++) {
                 if (scroll >= isPositionArticle[i].top && scroll <= isPositionArticle[i].bottom) {
+                    $('.slide__menu-item')
+                        .eq(i)
+                        .addClass('blog__menu-item_slide-menu_selected')
+                        .siblings()
+                        .removeClass('blog__menu-item_slide-menu_selected');
                     $item
                         .eq(i)
                         .addClass('blog__menu-item_selected')

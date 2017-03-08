@@ -16,7 +16,7 @@ $color-link: #FFF;
   visibility: hidden;
   transition: opacity .35s, visibility .35s, height .35s;
   overflow: hidden;
-  z-index: 10;
+  z-index: 200;
 
   &.open {
     opacity: .95;
