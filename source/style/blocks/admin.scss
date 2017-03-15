@@ -1,0 +1,79 @@
+.admin__wrapper {
+  background: #f9f9f9;
+  background-image: url("/assets/img/bg/admin_bg.png");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.admin__header{
+  height: 80px;
+  width: 100%;
+  background: #01bfa5;
+  font-weight: bold;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .admin__title {
+    font-size: 24px;
+    margin-left: 48px;
+  }
+
+  .admin__return {
+    margin-right: 33px;
+
+    .admin__return-link {
+      color: #ffffff;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.admin__tabs {
+
+}
+
+.admin__tabs-controls {
+  background: #f0efea;
+}
+
+.admin__tabs-controls-link{
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  padding: 20px;
+
+}
+
+.admin__tabs-controls-item {
+  display:  inline-block;
+  border-right: solid 3px #ffffff;
+  background: #f0efea;
+  width: 180px;
+  height: 60px;
+
+  a.admin__tabs-controls-link{
+    color: #808a8c;
+  }
+
+  &_active{
+    background: #ffffff;
+    a.admin__tabs-controls-link{
+      color: #01bfa5;
+    }
+  }
+}
+
+.admin__tabs-item {
+  display: none;
+  &_active{
+    display: block;
+  }
+}

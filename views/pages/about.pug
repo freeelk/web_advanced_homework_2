@@ -20,15 +20,16 @@ block content
                     .block-title Чем я могу быть вам полезен
                     .skills__text!= $.usefull.text
                     .skills__groups
-                        each skillGroup in $.usefull.areas
+                        each skillGroup in skills
                             .skills__group
-                                .skills__group-title #{skillGroup.name}
-                                each skill in skillGroup.skills
+                                .skills__group-title #{skillGroup.group}
+                                each skill in skillGroup.skillsList
+                                    -var circleValue = skill.progress * 283 / 100;
                                     .skill
                                         svg.skill__svg
-                                            circle(r="45" cx="50%" cy="50%" ).skill__circle-under
-                                            circle(r="45" cx="50%" cy="50%" ).skill__circle-above
-                                        .skill__name #{skill.name}
+                                            circle(r="45" cx="50%" cy="50%"  ).skill__circle-under
+                                            circle(r="45" cx="50%" cy="50%" stroke-dasharray= `${circleValue} 282.6`).skill__circle-above
+                                        .skill__name #{skill.label}
         section.section.map
             .map__google(id="map")
             .contacts

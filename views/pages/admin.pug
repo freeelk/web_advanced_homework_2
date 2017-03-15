@@ -1,0 +1,42 @@
+doctype html
+html
+    head
+        meta(charset="utf-8")
+        title #{title}
+        meta(content="" name="author")
+        meta(content="" name="description")
+        meta(content="" name="keywords")
+        meta(content="width=device-width, initial-scale=1" name="viewport")
+        meta(content="ie=edge" http-equiv="x-ua-compatible")
+        link(href='/assets/css/main.css', rel='stylesheet')
+        link(href='/assets/css/foundation.css', rel='stylesheet')
+
+        //- favicon block start
+        //- favicon block end
+
+    body
+        .wrapper.admin__wrapper
+            .admin__header
+                .admin__title Панель администрирования
+                .admin__return
+                    a.admin__return-link(href="index") Вернуться на сайт
+            .admin__tabs
+                ul.admin__tabs-controls
+                    li.admin__tabs-controls-item.admin__tabs-controls-item_active
+                        a.admin__tabs-controls-link(href="#") Раздел 1
+                    li.admin__tabs-controls-item
+                        a.admin__tabs-controls-link(href="#") Раздел 2
+                    li.admin__tabs-controls-item
+                        a.admin__tabs-controls-link(href="#") Раздел 3
+                ul.admin__tabs-list
+                    li.admin__tabs-item.admin__tabs-item_active
+                        include  ../sections/admin-tab1
+                    li.admin__tabs-item
+                        include  ../sections/admin-tab2
+                    li.admin__tabs-item
+                        include  ../sections/admin-tab3
+
+script(src='/assets/js/foundation.js')
+script(src='/assets/js/app.js')
+
+

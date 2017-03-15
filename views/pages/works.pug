@@ -11,13 +11,13 @@ block content
                 .slider-descr
                     .slider__descr-inner
                         .slider__descr-title
-                            .block-title(id='slider-title') Сайт школы онлайн-образования
-                        .slider__descr-skills(id='slider-skills') HTML, CSS, JAVASCRIPT
+                            .block-title(id='slider-title')
+                        .slider__descr-skills(id='slider-skills')
                         .slider__deskr-btn-wrapper
                             a.slider__deskr-link(href="#" id="slider-link" target="_blank")
                                 button.slider__deskr-btn Посмотреть сайт
                 .slider__display
-                    img.slider__display-img(src="/assets/img/content/slider/1.png" alt="Пример сайта 1" id="slider-preview")
+                    img.slider__display-img(src="" alt="Пример сайта 1" id="slider-preview")
                 .slider__switches
                     .slider__switch-bg-gray
                     .slider__switch
@@ -50,7 +50,7 @@ block content
                         img(src="/assets/img/bg/oсean_bg.jpg" alt="").feedbacks__bg-img
 
 
-            form.feedbacks__connect-me(name="connect-me-form", id="connect-me-form")
+            form.feedbacks__connect-me#connect-me-form(name="connect-me-form", action='contact' method="POST")
                 .connect-me
                     .connect-me__blur-wrapper
                         .connect-me__blur

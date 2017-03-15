@@ -56,34 +56,34 @@
   "greetMenu" : [
     {
       "label": "Мои работы",
-      "link": "works.html"
+      "link": "works"
     },
     {
       "label": "Обо мне",
-      "link": "about.html"
+      "link": "about"
     },
     {
       "label": "Блог",
-      "link": "blog.html"
+      "link": "blog"
     }
   ],
 
   "footerMenu" : [
     {
       "label": "Мои работы",
-      "link": "works.html"
+      "link": "works"
     },
     {
       "label": "Обо мне",
-      "link": "about.html"
+      "link": "about"
     },
     {
       "label": "Блог",
-      "link": "blog.html"
+      "link": "blog"
     },
     {
       "label": "Авторизация",
-      "link": "index.html"
+      "link": "index"
     }
   ],
 
@@ -97,14 +97,17 @@
         "skills" : [
           {
             "name": "HTML",
+            "inputName": "html",
             "progress": "50"
           },
           {
             "name": "CSS3",
+            "inputName": "css3",
             "progress": "50"
           },
           {
             "name": "JavaScript & jQuery",
+            "inputName": "js",
             "progress": "50"
           }
         ]
@@ -114,18 +117,22 @@
         "skills" : [
           {
             "name": "PHP",
+            "inputName": "php",
             "progress": "50"
           },
           {
             "name": "mySQL",
+            "inputName": "mysql",
             "progress": "50"
           },
           {
             "name": "Node.js & npm",
+            "inputName": "node",
             "progress": "50"
           },
           {
             "name": "Mongo db",
+            "inputName": "mongo",
             "progress": "50"
           }
         ]
@@ -135,14 +142,17 @@
         "skills" : [
           {
             "name": "Git",
+            "inputName": "git",
             "progress": "50"
           },
           {
             "name": "Gulp",
+            "inputName": "gulp",
             "progress": "50"
           },
           {
             "name": "Bower",
+            "inputName": "bower",
             "progress": "50"
           }
         ]

@@ -1,0 +1,16 @@
+{
+  "upload":"./public/assets/img/content/slider",
+  "mail": {
+    "subject": "Сообщение с сайта-портфолио",
+    "user": "EMAIL",
+    "pass ": "PASSWORD"
+  },
+
+  "db": {
+    "host": "HOST",
+    "port": "PORT",
+    "name": "DATABASE",
+    "user": "USER",
+    "password": "PASSWORD"
+  }
+}

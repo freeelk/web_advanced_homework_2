@@ -1,0 +1,16 @@
+{
+  "upload":"./public/assets/img/content/slider",
+  "mail": {
+    "subject": "Сообщение с сайта-портфолио",
+    "user": "volodymyr.v.shelest@gmail.com",
+    "pass ": "fltkfblf458908"
+  },
+
+  "db": {
+    "host": "vshelest.net",
+    "port": "27017",
+    "name": "portfolio",
+    "user": "webuser",
+    "password": "458908fltkfblf"
+  }
+}

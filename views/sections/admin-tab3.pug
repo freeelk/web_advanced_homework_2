@@ -1,0 +1,13 @@
+section.admin-tab
+    .admin-tab__title Страница "Мои работы"
+    form.admin__tabs__works-form#admin-works(action='/upload' method="POST" enctype="multipart/form-data")
+        .admin-tabs__form-header Добавить работу
+        input.admin-tabs__text-input.admin-tabs__text-input_works-name#works-title(placeholder="Название проекта", name="works-title")
+        input.admin-tabs__text-input.admin-tabs__text-input_works-name#works-link(placeholder="Ссылка", name="works-link")
+        input.admin-tabs__text-input.admin-tabs__text-input_works-techologies#works-skills(placeholder="Технологии", name="works-skills")
+        input.admin-tabs__file-input#works-image-upload(type="file", name="works-image")
+        label.admin__tabs__file-input-label(for="works-image-upload") Загрузить картинку
+
+        .admin-tab__works-status
+        input.admin-tab__send-button#works-submit(type="submit" value="Добавить")
+

@@ -1,0 +1,9 @@
+section.admin-tab
+    .admin-tab__title Страница "Блог"
+    form.admin__tab-blog-form#admin-blog( method="POST")
+        .admin-tabs__form-header Добавить запись
+        input.admin-tabs__text-input.admin-tabs__text-input_blog-item-name#blog-item-name(placeholder="Название", name="blog-item-name")
+        input.admin-tabs__text-input.admin-tabs__text-input_blog-item-date#blog-item-date(type="date" placeholder="Дата", name="blog-item-date")
+        textarea.admin-tabs__text-input.admin-tabs__text-input_blog-item-text#blog-item-text(placeholder="Содержимое", name="blog-item-text")
+        .admin-tab__blog-status
+        input.admin-tab__send-button#blog-submit(type="submit" value="Добавить")

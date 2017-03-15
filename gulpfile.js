@@ -12,6 +12,7 @@ global.$ = {
     gulp: require('gulp'),
     del: require('del'),
     browserSync: require('browser-sync').create(),
+    nodemon: require('nodemon'),
     spritesmith: require("gulp.spritesmith"),
     ftp: require('vinyl-ftp'),
     gp: require('gulp-load-plugins')(),
@@ -33,13 +34,15 @@ $.gulp.task('default', $.gulp.series(
     ),
     $.gulp.parallel(
         'sass',
-        'pug',
         'js:foundation',
         'js:process',
         'copy:image',
         'copy:font',
         'copy:google-map-verify',
         'css:foundation'
+    ),
+    $.gulp.parallel(
+        'nodemon'
     ),
     $.gulp.parallel(
         'watch',

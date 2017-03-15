@@ -12,18 +12,18 @@ block content
                         aside.blog__col.blog__col_left
                             .blog__wrap-menu
                                 ul.blog__menu
-                                    each item in $.blog
+                                    each item in blog
                                         if item.selected
                                             li.blog__menu-item.blog__menu-item_selected #{item.title}
                                         else
                                             li.blog__menu-item #{item.title}
                         main.blog__col.blog__col_right
                             .blog__content
-                                each item in $.blog
+                                each item in blog
                                     article.blog__item.news
                                         h1.blog__item-header #{item.title}
                                         .blog__item-date #{item.date}
-                                        .blog__item-content!= item.content
+                                        .blog__item-content!= item.text
 
         .empty
     include ../sections/footer
@@ -31,7 +31,7 @@ block content
         .slide-menu-wrapper
             .slide-menu__handler
             ul.blog__menu
-                each item in $.blog
+                each item in blog
                     if item.selected
                         li.blog__menu-item.slide__menu-item.blog__menu-item_slide-menu.blog__menu-item_slide-menu_selected #{item.title}
                     else

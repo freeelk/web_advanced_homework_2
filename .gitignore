@@ -35,7 +35,13 @@ bower_components
 dist
 build
 sprites_generated
-
+config.json
 # Node.JS
 node_modules
 npm-debug.log
+/yarn.lock
+Буде вилучено public/assets/img/bg/admin_bg.png
+Буде вилучено public/assets/img/icons/upload_image.png
+Буде вилучено source/images/bg/admin_bg.png
+Буде вилучено source/images/icons/upload_image.png
+Буде вилучено source/images/logo/

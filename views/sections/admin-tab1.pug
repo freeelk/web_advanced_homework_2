@@ -1,0 +1,15 @@
+section.admin-tab
+    .admin-tab__title Страница "Обо мне"
+    form.admin__tabs__skills-form#admin-skills( method="POST")
+        .admin-tabs__skills-container
+            each skillsGroup in skills
+                .admin-tabs__skills(data-id=`${skillsGroup._id}`)
+                    .admin-tabs__form-header #{skillsGroup.group}
+                    .admin-tabs__skills-rows
+                        each skill in skillsGroup.skillsList
+                            .admin-tabs__skill-row
+                                .admin-tabs__skill-row-label #{skill.label}
+                                .admin-tabs__skill-row-percent %
+                                input.admin-tabs__text-input.admin-tabs__text-input_percent(name=`${skill.name}` type="number" min="0" max="100" required value=`${skill.progress}`)
+        .admin-tab__skills-status
+        input.admin-tab__send-button#skills-submit(type="submit" value="Сохранить")

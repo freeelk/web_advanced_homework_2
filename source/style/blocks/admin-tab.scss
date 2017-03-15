@@ -1,0 +1,135 @@
+section.admin-tab {
+  margin-left: 30px;
+  margin-top: 45px;
+  color: #808a8c;
+}
+
+.admin-tab__title {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom:30px
+}
+
+.admin__tabs__skills-form {
+
+}
+
+.admin-tabs__skills-container {
+  width: 600px;
+  margin-bottom: 30px;
+  @extend %clearfix;
+}
+
+
+.admin-tabs__skills {
+  margin-bottom:30px;
+  float: left;
+  width: 200px;
+  margin-right: 100px;
+}
+
+.admin-tabs__form-header {
+  font-weight: bold;
+}
+
+.admin-tabs__skills-rows {
+
+}
+
+.admin-tabs__skill-row {
+  padding-left: 20px;
+  margin-top: 12px;
+  width: 100%;
+  @extend %clearfix;
+}
+
+.admin-tabs__skill-row-label {
+  float: left;
+  max-width: 70px;
+}
+
+.admin-tabs__text-input {
+  border: none;
+  color: #808a8c;
+  border-radius: 5px;
+  margin-right: 10px;
+  text-align: center;
+  height: 30px;
+  &_percent {
+    float:right;
+    width: 45px;
+
+
+  }
+  &_blog-item-name, &_blog-item-date, &_blog-item-text, &_works-name, &_works-techologies  {
+    text-align: left;
+    padding-left: 10px;
+    margin-top: 20px;
+    display: block;
+  }
+
+  &_blog-item-name  {
+    width: 300px;
+  }
+  &_blog-item-date  {
+    width: 300px;
+  }
+  &_blog-item-text  {
+    width: 400px;
+    height: 160px;
+    margin-bottom: 20px;
+  }
+}
+
+.admin-tabs__file-input {
+  display: block;
+  margin-bottom: 170px;
+  margin-top: 20px;
+}
+
+.admin-tabs__file-input {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+label.admin__tabs__file-input-label {
+  display: block;
+  width: 200px;
+  margin-top:20px;
+  margin-bottom:200px;
+  color: #01bfa5;
+  background-image: url('/assets/img/icons/upload_image.png');
+  background-repeat: no-repeat;
+  background-position: left center;
+  padding-left: 45px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.admin-tabs__file-input:focus + label,
+.admin-tabs__file-input:hover + label
+{
+  cursor: pointer;
+}
+
+.admin-tabs__skill-row-percent {
+  float:right;
+}
+
+.admin-tab__send-button {
+  border: none;
+  border-radius: 5px;
+  color: #FFFFFF;
+  height: 45px;
+  padding: 12px;
+  text-align: center;
+  outline: none;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #00bf9d;
+}

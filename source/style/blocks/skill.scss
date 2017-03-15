@@ -2,6 +2,7 @@
   position: relative;
   width: 120px;
   height: 120px;
+  margin: 5px;
   display:inline-block;
 }
 
@@ -20,7 +21,7 @@ svg.skill__svg {
 
   .skill__circle-above {
     stroke: $skill;
-    stroke-dasharray: 197.82 282.6;
+
     transition: all 1s;
   }
 }

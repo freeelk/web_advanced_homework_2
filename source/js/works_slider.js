@@ -21,7 +21,7 @@ class SlideButton {
         let image2 = this.getElementByClassName(this.cssClasses.belowCssClass);
 
         if (!(image1 && image2)) {
-            //return;
+            return;
         }
 
         image2.src = nextImgSrc;
@@ -86,6 +86,7 @@ class WorksSlider {
         this.templateElements = templateElements;
         this.currentItem = 0;
 
+        //console.log(this.data);
 
         let leftSlideButtonCssClasses = {
             shownCssClass: 'slider__switch-img_left_shown',
@@ -97,6 +98,7 @@ class WorksSlider {
             PATH_TO_PREVIEWS + this.getData(this.nextCount()).preview,
             leftSlideButtonCssClasses
         );
+
 
 
         let rightSlideButtonCssClasses = {
